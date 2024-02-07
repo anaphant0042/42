@@ -1,0 +1,27 @@
+
+* {
+	font-family: sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+select, label {
+	display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+img {
+	display: block;
+	width: 40%;
+    margin: 10px auto;
+}
+
+form {
+	margin: 0 auto;
+    padding: 10px;
+}

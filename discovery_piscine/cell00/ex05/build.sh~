@@ -1,0 +1,10 @@
+i=1;
+	for argument in "$@"
+	if "$@" == ""
+	then
+		echo "no has pasado argumentos";
+	else
+		do
+			mkdir "ex $argument";
+			i=$((i+1));
+done

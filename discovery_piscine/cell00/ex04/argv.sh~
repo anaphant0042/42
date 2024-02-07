@@ -1,0 +1,6 @@
+i=1;
+for argument in "@"
+do
+	echo $1;
+	i=$((i+1));
+done

@@ -1,0 +1,42 @@
+
+h1 {
+	font-size: 0.2em;
+	font-weight: normal;
+    text-align: center;
+    color: white;
+   	margin: 0 auto;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+    
+}
+
+.parallax {
+	height: 800px;
+    width: 100%;
+    background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    
+}
+
+.first {
+	background-image: url('https://images.pexels.com/photos/3476312/pexels-photo-3476312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    
+}
+
+.second {
+	background-image: url('https://images.pexels.com/photos/20062228/pexels-photo-20062228/free-photo-of-stars-on-night-sky-over-car.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+}
+
+.middle {
+	height: 200px;
+    background-color: black;
+}
+
+
+.parallax, .middle {
+	position: relative;
+}

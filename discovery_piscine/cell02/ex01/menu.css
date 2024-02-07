@@ -1,0 +1,33 @@
+
+* {
+    font-family: sans-serif;
+    background-color: #FFCA3A;
+}
+
+h1 {
+	text-align: center;
+}
+
+select, label {
+	display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+img {
+	display: block;
+	width: 30%;
+	margin: 10px auto;
+	border: 2px solid orange;
+}
+
+form {
+	margin: 0 auto;
+    padding: 10px;
+}
+
+select {
+    background-color: white;
+}

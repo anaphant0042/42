@@ -1,0 +1,24 @@
+<style>
+
+div {
+	display: inline-grid;
+    border:  1px solid black;
+    width: 30%;
+    height: 3em;
+    line-height: 3em;
+}
+
+#yellow {
+ background-color: yellow;
+}
+
+#orange {
+ background-color: orange;
+}
+
+</style>
+
+<body>
+
+
+<div id="yellow">It was all yellow</div><div id="orange">Orange like the sunset</div>

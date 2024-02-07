@@ -1,0 +1,50 @@
+<style>
+* {
+ 	background-color: pink;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+}
+
+div {
+	display: inline-grid;
+}
+
+img {
+	width: 300px;
+}
+
+hr {
+	width: 100%;
+}
+
+footer {
+	font-style: italic;
+}
+
+</style>
+
+<head>
+<title>Basics</title>
+</head>
+
+<h1>Amazing shops!</h1>
+
+<div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPjeYJgcc_cJrYgkvMx-gB_IofNBKvdcOG5r6bMiWtOA&s"/>
+<a href="https://wearpact.com/">Wear Pact</a>
+</div>
+
+<div>
+<img src="https://cdn0.iconfinder.com/data/icons/most-usable-logos/120/Amazon-512.png"/>
+<a href="amazon.es">Amazon</a>
+</div>
+
+<hr>
+
+<footer>
+<p>© ana 2024</p>
+
+</footer>
