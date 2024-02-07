@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>balloon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+
+  <body>
+
+      <div id="balloon"></div>
+      <p id="text"></p>
+
+  </body>
+</html>
+
+<script>
+    var widthBalloon = document.getElementById('balloon').offsetWidth;
+    var heightBalloon = document.getElementById('balloon').offsetHeight;
+    /*document.getElementById('balloon').style.width = widthBalloon + 10 + 'px'*/
+
+    document.getElementById("text").innerHTML = widthBalloon + "," + heightBalloon;
+</script>
+
+<style>
+body {
+	display: flex;
+    flex: 1;
+  	height:100vh;
+  	justify-content: center;
+  	align-items: center;
+}
+
+#balloon {
+	width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: red;
+    margin: 0;
+    padding: 0;
+}
+</style>
