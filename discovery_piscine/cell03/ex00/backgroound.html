@@ -3,32 +3,27 @@
 <head>
 <title>Presentation card</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="card.css">
+<link rel="stylesheet" href="backgroound.css">
 </head>
 
-<style>
-button {
-	font-size: 2em;
-	padding: 30px;
-}
-
-body {
-	background-color: pink;
-}
-
-</style>
 <script>
 
-let bg_color;
 
-function myFunction () {
-document.getElementById('bgcolor').style.background-color='white'}
+function changeBgColor() {
+document.body.style.backgroundColor = "#" + randomColor() } ;
+
+function randomColor() {
+	 return Math.floor(Math.random() * 16777217).toString(16);
+}
+
 
 </script>
 
 <body id="bgcolor">
 
-<button type="button" onclick="myFunction()">Random color!</button>
+<p id="demo"></p>
+
+<button id="button" onclick="changeBgColor()">Apply to background!</button>
 
 </body>
 </html>
