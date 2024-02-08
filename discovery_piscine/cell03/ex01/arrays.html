@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>arrays test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+
+      <div id="balloon"></div>
+      <p id="color"></p>
+      <p id="size"></p>
+
+  </body>
+</html>
+
+<script>
+
+const balloon = document.getElementById("balloon");
+
+balloon.addEventListener('click', changeColorUp);
+balloon.addEventListener('mouseout', changeColorDown);
+
+balloon.addEventListener('click', increaseSize);
+balloon.addEventListener('mouseout', decreaseSize);
+
+balloon.addEventListener('click', updateNumber);
+balloon.addEventListener('mouseout', updateSize);
+
+balloon.addEventListener('click', updateSize);
+balloon.addEventListener('mouseout', updateNumber);
+
+let listColors = ['red', 'green', 'blue'];
+
+let currentColor = 0;
+function changeColorUp() {
+    balloon.style.backgroundColor = listColors[currentColor++];
+    if (currentColor == listColors.length) {
+        currentColor = 0;
+    }
+}
+
+function changeColorDown() {
+  balloon.style.backgroundColor = listColors[currentColor--];
+  if (currentColor < 0) {
+    currentColor = 2;
+  }
+};
+
+function updateNumber() {
+    document.getElementById("color").innerHTML = currentColor + " |";
+}
+
+function updateSize() {
+    document.getElementById("size").innerHTML = currentSize + "px";
+}
+
+let currentSize = 200;
+
+function increaseSize() {
+    if (currentSize < 420) {
+        balloon.style.height = (currentSize + 10)+"px";
+        balloon.style.width = (currentSize + 10)+"px";
+        currentSize = currentSize + 10;
+    }
+    else {
+        balloon.style.height = 200 + "px";
+        balloon.style.width = 200 + "px";
+        currentSize = 200;
+    }
+}
+
+function decreaseSize() {
+    if (currentSize > 200) {
+        balloon.style.height = (currentSize - 5)+"px";
+        balloon.style.width = (currentSize - 5)+"px";
+        currentSize = currentSize -5;
+    }
+    else {
+        balloon.style.height = 200 + "px";
+        balloon.style.width = 200 + "px";
+        currentSize = 200;
+    }
+}
+
+</script>
+
+<style>
+
+body {
+	display: flex;
+    flex: 1;
+  	height:100vh;
+  	justify-content: center;
+  	align-items: center;
+}
+
+
+#balloon {
+	width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: red;
+    margin: 0;
+    padding: 0;
+}
+</style>

@@ -16,11 +16,26 @@
 </html>
 
 <script>
-    var widthBalloon = document.getElementById('balloon').offsetWidth;
-    var heightBalloon = document.getElementById('balloon').offsetHeight;
-    /*document.getElementById('balloon').style.width = widthBalloon + 10 + 'px'*/
 
-    document.getElementById("text").innerHTML = widthBalloon + "," + heightBalloon;
+const balloon = document.getElementById("balloon");
+let listColors = ['red', 'green', 'blue'];
+
+let currentColor = 0;
+
+balloon.addEventListener('click', function() {
+  this.style.backgroundColor = listColors[currentColor++];
+  if (currentColor == listColors.length) {
+    currentColor = 0;
+  }
+})
+
+balloon.addEventListener('mouseout', function() {
+  this.style.backgroundColor = listColors[currentColor++];
+  if (currentColor == listColors.length) {
+    currentColor = 0;
+  }
+})
+
 </script>
 
 <style>
