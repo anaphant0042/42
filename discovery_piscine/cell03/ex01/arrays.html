@@ -22,38 +22,34 @@ const balloon = document.getElementById("balloon");
 balloon.addEventListener('click', changeColorUp);
 balloon.addEventListener('mouseout', changeColorDown);
 
-balloon.addEventListener('click', increaseSize);
-balloon.addEventListener('mouseout', decreaseSize);
-
-balloon.addEventListener('click', updateNumber);
-balloon.addEventListener('mouseout', updateSize);
-
-balloon.addEventListener('click', updateSize);
-balloon.addEventListener('mouseout', updateNumber);
-
 let listColors = ['red', 'green', 'blue'];
 
 let currentColor = 0;
 function changeColorUp() {
-    balloon.style.backgroundColor = listColors[currentColor++];
-    if (currentColor == listColors.length) {
+	currentColor = currentColor + 1;
+    /*if (currentColor == listColors.length) {
         currentColor = 0;
     }
+    */
+    currentColor = currentColor % listColors.length
+    increaseSize();
+    updateNumber();
+    balloon.style.backgroundColor = listColors[currentColor];
+
 }
 
 function changeColorDown() {
-  balloon.style.backgroundColor = listColors[currentColor--];
+	currentColor = currentColor - 1;
   if (currentColor < 0) {
     currentColor = 2;
-  }
+  };
+  decreaseSize();
+  updateNumber();
+  balloon.style.backgroundColor = listColors[currentColor];
 };
 
 function updateNumber() {
-    document.getElementById("color").innerHTML = currentColor + " |";
-}
-
-function updateSize() {
-    document.getElementById("size").innerHTML = currentSize + "px";
+    document.getElementById("color").innerHTML = currentColor;
 }
 
 let currentSize = 200;
