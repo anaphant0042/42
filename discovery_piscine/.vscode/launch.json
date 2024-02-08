@@ -4,11 +4,12 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open arrays.html",
-            "file": "/Users/alara/42/discovery_piscine/cell03/ex01/arrays.html"
+            "name": "Open calc.html",
+            "file": "/Users/alara/42/discovery_piscine/cell03/ex02/calc.html"
         }
     ]
 }

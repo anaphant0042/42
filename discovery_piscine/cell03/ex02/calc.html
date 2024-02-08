@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Calc</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1>Simple but powerful calculator</h1>
+        <section class="inputs">
+            <input type="number" min="0" id="num1">
+
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+
+            <input type="number" min="0" id="num2">
+
+            <button id="button">Try me!</button>
+        </section>
+
+        <p id="test"></p>
+
+    </body>
+
+</html>
+
+
+<script> 
+
+    let button = document.getElementById('button');
+
+    button.addEventListener('click', function () {
+        let int1 = Number.isInteger(parseFloat(document.getElementById('num1').value));
+        console.log(int1);
+
+        let int2 = Number.isInteger(parseFloat(document.getElementById('num2').value));
+        console.log(int2);
+
+        let number1 = parseInt(document.getElementById('num1').value);
+        console.log(number1);
+
+        let operator = document.getElementById('operator').value;
+        console.log(operator);
+
+        let number2 = parseInt(document.getElementById('num2').value);
+        console.log(number2);
+
+        
+        if (number1 < 0 || number2 < 0 || int1 == false || int2 == false) {
+            alert('Error :(')
+        }
+        else if (operator == '+') {
+            result = number1 + number2;
+            alert(result)
+        }
+        else if (operator == '-') {
+            result = number1 - number2;
+            alert(result)
+        }
+        else if (operator == '*') {
+            result = number1 * number2;
+            alert(result)
+        }
+        else if (operator == '/' && number2 == 0) {
+            alert('It’s over 9000!');
+        }
+        else if (operator == '/') {
+            result = number1 / number2;
+            alert(result)
+        }
+        else if (operator == '%' && number2 == 0) {
+            alert('It’s over 9000!');
+        }
+        else {
+            result = number1 % number2;
+            alert(result)
+        }
+        
+
+        
+        console.log(result);
+
+        }
+    );
+
+ 
+
+    function init() {
+    var count = 30; // set secconds
+    var counter = setInterval(timer, 1000 * count);
+
+    function timer() {
+        alert("Please, use me...")
+        //clearInterval(counter) // stop interval
+    }
+
+}
+
+window.onload = init;
+
+
+</script>
+
+<style>
+
+</style>
