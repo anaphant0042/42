@@ -23,11 +23,20 @@
     
     function promptFunction() {
         let item_text = prompt('What is your next task?');
+        if (item_text == "") {
+            alert('empty task');
+        }
+        else {
         console.log(item_text);
         let newDiv = document.createElement('div');
         newDiv.innerHTML = item_text;
-        let parent = document.getElementById('ft_list');
-        parent.appendChild(newDiv);
+        newDiv.setAttribute('class','list_item')
+        let tasks = document.getElementById('ft_list');
+        tasks.appendChild(newDiv);
+        tasks.insertBefore(newDiv,tasks.children[0]);
+        document.cookie = item_text;
+        }
+        
     }
 
     /*
