@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>To Do List App</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1>Your local to-do list</h1>
+        <div id="ft_list">
+            <div id="first_div" class="list_item"><p>Example task</p></div>
+        </div>
+        <button name="new" onclick="promptFunction()">New to-do item</button>
+
+    </body>
+
+</html>
+
+<script>
+    
+    function promptFunction() {
+        let item_text = prompt('What is your next task?');
+        console.log(item_text);
+        let newDiv = document.createElement('div');
+        newDiv.innerHTML = item_text;
+        let parent = document.getElementById('ft_list');
+        parent.appendChild(newDiv);
+    }
+
+    /*
+    function promptFunction() {
+        prompt = "what new task"
+        if (prompt isnt empty) {
+            create div with class task on top with text from pompt
+            document.cookie = "prompt"
+        }
+        else {
+        nothing?
+        }
+    }
+
+
+
+    addEventListener('click',removeTask)
+
+    function removeTask() {
+        prompt = "sure you want to delete?"
+        if (prompt = yes) {
+            delete div;
+            update cookie;
+        }
+        else {
+            nothing?
+        }
+    }
+
+    */
+</script>
