@@ -20,7 +20,7 @@
 </html>
 
 <script>
-    
+
     function promptFunction() {
         let item_text = prompt('What is your next task?');
         if (item_text == "") {
@@ -34,25 +34,17 @@
         let tasks = document.getElementById('ft_list');
         tasks.appendChild(newDiv);
         tasks.insertBefore(newDiv,tasks.children[0]);
-        document.cookie = item_text;
         }
         
     }
 
-    /*
-    function promptFunction() {
-        prompt = "what new task"
-        if (prompt isnt empty) {
-            create div with class task on top with text from pompt
-            document.cookie = "prompt"
-        }
-        else {
-        nothing?
-        }
+    let listItem = document.getElementByNameClass('list_item')
+    listItem.addEventListener('click',removeTask);
+
+    function removeTask() {
+        let confirmation = confirm('are you sure you want to delete? the task');
     }
-
-
-
+/*
     addEventListener('click',removeTask)
 
     function removeTask() {
