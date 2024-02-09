@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>arrays test</title>
+    <title>balloon</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -9,8 +9,6 @@
   <body>
 
       <div id="balloon"></div>
-      <p id="color"></p>
-      <p id="size"></p>
 
   </body>
 </html>
@@ -27,14 +25,15 @@ let listColors = ['red', 'green', 'blue'];
 let currentColor = 0;
 function changeColorUp() {
 	currentColor = currentColor + 1;
-    /*if (currentColor == listColors.length) {
+    /*
+    if (currentColor == listColors.length) {
         currentColor = 0;
     }
     */
     currentColor = currentColor % listColors.length
     increaseSize();
-    updateNumber();
     balloon.style.backgroundColor = listColors[currentColor];
+    console.log(currentColor)
 
 }
 
@@ -44,7 +43,6 @@ function changeColorDown() {
     currentColor = 2;
   };
   decreaseSize();
-  updateNumber();
   balloon.style.backgroundColor = listColors[currentColor];
 };
 
