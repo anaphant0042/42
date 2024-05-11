@@ -3,8 +3,8 @@
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	unsigned int	i;
-	size_t	destlen;
-	size_t	srclen;
+	size_t				destlen;
+	size_t				srclen;
 
 	i = 0;
 	destlen = ft_strlen(dest);
@@ -24,7 +24,7 @@ int main(void)
 {
 	char src[] = "Bananananananananannanana";
 	char dest[20] = "Elena";
-	
+
 	printf("%s\n", dest);
 	ft_strlcat(dest, src, 20);
 	printf("%s\n", dest);

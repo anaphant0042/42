@@ -17,25 +17,16 @@ char	*ft_strnstr(char *str, char *to_find, size_t n)
 	}
 	return (NULL);
 }
-/*
-int	ft_strlen(char *str)
-{
-	int	i;
 
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
-*/
+/*
 int	main(void)
 {
 	char needle[] = "ana";
 	char	heystack[] = "bxnana";
 	int	n;
 
-	n = 2; // i get a weird seg fault if i dont find the needle n the heystack in the n bytes.
+	n = 2; // i get a weird seg fault if i dont find 
+				 // the needle n the heystack in the n bytes.
 	printf("%s\n", ft_strnstr(heystack, needle, n));
 }
+*/

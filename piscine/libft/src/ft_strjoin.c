@@ -5,12 +5,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len1;
 	int		len2;
 	char	*cat;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	len1 = ft_strlen((char *)s1);
 	len2 = ft_strlen((char *)s2);
-
 	cat = (char *)malloc(sizeof(s1) * (len1 + len2 + 1));
 	if (!cat)
 		return (NULL);
