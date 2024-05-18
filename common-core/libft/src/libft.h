@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
+void	ft_putstr_fd(char *s, int fd);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 int			ft_strlen(char *str);
 char		*ft_strrchr(const char *s, int c);
