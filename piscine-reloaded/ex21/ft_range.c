@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/10 19:20:08 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/12 12:03:01 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/06/12 16:48:02 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/12 16:48:21 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
 /*
 #include <stdio.h>
 int	*ft_range(int min, int max);
@@ -35,6 +33,9 @@ int	main(void)
 	}
 }
 */
+
+#include <stdlib.h>
+
 int	*ft_range(int min, int max)
 {
 	int	*range;

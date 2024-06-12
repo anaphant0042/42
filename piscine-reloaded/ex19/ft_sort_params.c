@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_param.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/10 17:13:14 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/10 18:56:37 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/06/12 16:45:32 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/12 16:46:00 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,6 @@ int	ft_strcmp(char *str1, char *str2)
 
 	i = 0;
 	while (str1[i] && str2[i] && str1[i] == str2[i])
-	{
 		i++;
-	}
 	return (str1[i] - str2[i]);
 }

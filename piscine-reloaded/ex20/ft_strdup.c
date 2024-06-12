@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/10 19:01:25 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/10 19:18:20 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/06/12 16:47:10 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/12 16:47:47 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*#include <stdlib.h>
+/*
+#include <stdlib.h>
 
 int	ft_strlen(char *str);
 char	*ft_strdup(char *src);
