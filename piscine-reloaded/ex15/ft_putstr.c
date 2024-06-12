@@ -6,9 +6,11 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 16:42:25 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/12 16:42:41 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/12 17:51:34 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 /*
 #include <stdio.h>
 
@@ -17,7 +19,7 @@ void	ft_putstr(char *str);
 
 int	main(void)
 {
-	char *str = "Ana Banana";
+	char *str = "margaritas";
 	ft_putstr(str);
 }
 
@@ -26,7 +28,6 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 */
-#include <unistd.h>
 
 void	ft_putstr(char *str)
 {

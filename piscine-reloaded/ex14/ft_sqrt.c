@@ -6,20 +6,23 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 16:41:17 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/12 16:41:27 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/12 17:48:46 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
+#include <stdio.h>
+
 int	ft_sqrt(int nb);
 
 int	main(void)
 {
 	int	nb;
 
-	nb = 676;
+	nb = 100;
 	printf("%i", ft_sqrt(nb));
 }
 */
+
 int	ft_sqrt(int nb)
 {
 	int	i;

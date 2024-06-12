@@ -6,34 +6,28 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 16:47:10 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/12 16:47:47 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/12 18:01:07 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-#include <stdlib.h>
 
+#include <stdlib.h>
 int	ft_strlen(char *str);
+
+/*
+#include <stdio.h>
+
 char	*ft_strdup(char *src);
 
 int	main(void)
 {
 	char	*str1;
-	char	*str2;
+	char	*str2 = "Ana";
 
 	str1 = "Banana";
 	str2 = ft_strdup(str1);
+	printf("%s\n", str2);
 }
 */
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 char	*ft_strdup(char *src)
 {
@@ -53,4 +47,14 @@ char	*ft_strdup(char *src)
 		}
 	}
 	return (dup);
+}
+
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

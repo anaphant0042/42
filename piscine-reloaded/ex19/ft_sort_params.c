@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_param.c                                    :+:      :+:    :+:   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 16:45:32 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/12 16:46:00 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/12 17:56:25 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	swap_element(char **str1, char **str2);
 void	print_array(int argc, char **argv);
 void	bubble_sort(int argc, char **argv);
 int		ft_strcmp(char *str1, char *str2);
+void	ft_putchar(char c);
 /*
 void	ft_putchar(char c)
 {

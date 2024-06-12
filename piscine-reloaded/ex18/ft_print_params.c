@@ -6,17 +6,20 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 16:44:14 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/12 16:44:56 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/12 17:53:22 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
+
+void	ft_putchar(char c);
+
 /*
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 */
-
-#include <unistd.h>
 
 int	main(int argc, char **argv)
 {

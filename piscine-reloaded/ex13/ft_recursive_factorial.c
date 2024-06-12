@@ -6,24 +6,26 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 16:40:21 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/12 16:40:36 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/12 17:42:05 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*#include <stdio.h>
+/*
+#include <stdio.h>
+
 int	ft_recursive_factorial(int nb);
 
 int	main(void)
 {
 	int	nb;
 
-	nb = 11;
+	nb = 16;
 	printf("%i", ft_recursive_factorial(nb));
 }
 */
 
 int	ft_recursive_factorial(int nb)
 {
-	if (nb < 0)
+	if (nb < 0 || nb > 16)
 		return (0);
 	if (nb <= 1)
 		return (1);
