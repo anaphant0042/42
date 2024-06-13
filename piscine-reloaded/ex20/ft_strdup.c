@@ -6,11 +6,12 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 16:47:10 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/12 18:01:07 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/13 18:34:02 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
 int	ft_strlen(char *str);
 
 /*
