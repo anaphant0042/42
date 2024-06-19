@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/12 12:47:37 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/19 13:13:31 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/06/19 13:32:59 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/19 13:51:57 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-#define FT_POINT_H
+#include "header.h"
 
-typedef struct point
+void	ft_putchar(char c)
 {
-	int	x;
-	int	y;
-}	t_point;
-
-#endif
+	write(1, &c, 1);
+}

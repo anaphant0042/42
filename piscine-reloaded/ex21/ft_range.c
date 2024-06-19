@@ -6,12 +6,15 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 16:48:02 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/12 16:48:21 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/19 18:01:09 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
+
+int	*ft_range(int min, int max);
 /*
 #include <stdio.h>
-int	*ft_range(int min, int max);
 
 int	main(void)
 {
@@ -19,22 +22,18 @@ int	main(void)
 	int	max;
 	int	*range;
 
-	min = 15;
-	max = 30;
+	min = 1;
+	max = 5;
 	range = ft_range(min, max);
 
-	int	diff = max - min;
-
 	int	i = 0;
-	while (i < diff)
+	while (range[i])
 	{
 		printf("%i\n", range[i]);
 		i++;
 	}
 }
 */
-
-#include <stdlib.h>
 
 int	*ft_range(int min, int max)
 {
@@ -47,7 +46,7 @@ int	*ft_range(int min, int max)
 		return (NULL);
 	else
 	{
-		range = (int *)malloc(sizeof(int) * diff);
+		range = (int *)malloc(sizeof(int) * (diff + 1));
 		if (range == NULL)
 			return (0);
 		i = 0;
@@ -56,6 +55,7 @@ int	*ft_range(int min, int max)
 			range[i] = min + i;
 			i++;
 		}
+		range[i] = '\0';
 	}
 	return (range);
 }

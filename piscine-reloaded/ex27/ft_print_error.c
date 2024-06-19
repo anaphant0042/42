@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   ft_print_error.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/12 12:47:37 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/19 13:13:31 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/06/19 13:44:24 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/19 16:51:27 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-#define FT_POINT_H
+#include "header.h"
 
-typedef struct point
+void	ft_print_error(int x)
 {
-	int	x;
-	int	y;
-}	t_point;
+	char *error[] = {"File name missing\0", "Too many arguments\0", "Cannot read file\0"};
+	int	i;
 
-#endif
+	i = 0;
+	while (error[x][i])
+	{
+		ft_putchar(error[x][i]);
+		i++;	
+	}
+}

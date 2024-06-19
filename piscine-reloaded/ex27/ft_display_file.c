@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   ft_display_file.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/12 12:47:37 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/19 13:13:31 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/06/19 13:22:40 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/19 17:18:52 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-#define FT_POINT_H
+#include "header.h"
 
-typedef struct point
+void	ft_display_file(char *text)
 {
-	int	x;
-	int	y;
-}	t_point;
-
-#endif
+	int	i;
+	char	c;
+	
+	i = 0;
+	while (text[i])
+	{
+		c = text[i];
+		ft_putchar(c);	
+		i++;
+	}
+}

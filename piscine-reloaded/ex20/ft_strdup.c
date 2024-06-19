@@ -6,13 +6,14 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 16:47:10 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/13 18:34:02 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/19 18:04:11 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_strlen(char *str);
+int		ft_strlen(char *str);
+char	*ft_strdup(char *src);
 
 /*
 #include <stdio.h>
@@ -25,8 +26,9 @@ int	main(void)
 	char	*str2 = "Ana";
 
 	str1 = "Banana";
+	printf("str2 contains: %s\n", str2);
 	str2 = ft_strdup(str1);
-	printf("%s\n", str2);
+	printf("str2 now contains: %s\n", str2);
 }
 */
 
