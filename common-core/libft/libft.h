@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:23:44 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/25 14:24:54 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/25 14:53:31 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,4 @@ int				ft_isdigit(int c);
 int				ft_isupper(int c);
 int				ft_islower(int c);
 int				ft_isalnum(int c);
+static int			ft_s_strlen(char *str);
