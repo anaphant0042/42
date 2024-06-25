@@ -1,8 +1,18 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/25 14:35:51 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/25 14:35:55 by alara-gu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	if (dest < src)
@@ -26,9 +36,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 /*
 int		main(void)
 {
-	char dest[] = "ana";
-	char src[] = "banana";
-	int n = 2;
+	char dest[] = "banana";
+	char src[] = "orange";
+	int n = 5;
 
 	printf ("%s\n", dest);
 	ft_memmove(dest, src, n);
