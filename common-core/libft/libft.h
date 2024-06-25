@@ -6,13 +6,14 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:23:44 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/25 14:53:31 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/25 17:18:23 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <fcntl.h>
 
 void			ft_putstr_fd(char *s, int fd);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
@@ -37,4 +38,3 @@ int				ft_isdigit(int c);
 int				ft_isupper(int c);
 int				ft_islower(int c);
 int				ft_isalnum(int c);
-static int			ft_s_strlen(char *str);
