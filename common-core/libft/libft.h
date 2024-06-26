@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:23:44 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/25 17:18:23 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/26 15:59:09 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <fcntl.h>
 
 void			ft_putstr_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 int				ft_strlen(char *str);
 char			*ft_strrchr(const char *s, int c);
