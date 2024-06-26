@@ -1,6 +1,14 @@
-#include "libft.h"
-// man says to use const char *s as argument
-// whats the difference between const and noconst?
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/26 16:17:43 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/26 16:19:23 by alara-gu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -20,12 +28,13 @@ char	*ft_strrchr(const char *s, int c)
 	else
 		return ((char *)s + j);
 }
-
-/*int	main(void)
+/*
+int	main(void)
 {
-	char needle[] = "ana";
-	char	heystack[] = "banana";
+	char	needle = 'x'; 
+	char	heystack[] = "baxnaxna";
 
 	printf("%s\n", ft_strrchr(heystack, needle));
 
-}*/
+}
+*/

@@ -1,4 +1,14 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/26 16:23:09 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/26 16:29:18 by alara-gu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -20,6 +30,6 @@ int	main(void)
 	char	heystack[] = "banxna";
 	int	n = 2;
 
-	printf("%p\n", ft_memchr(heystack, needle, n));
+	printf("%s\n", (char *)ft_memchr(heystack, needle, n));
 }
 */

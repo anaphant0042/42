@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:07:37 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/25 15:12:21 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/26 16:10:24 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	ft_s_strlen(char *str)
 		i++;
 	return (i);
 }
-
+/*
 int main(void)
 {
 	char src[] = "Banana";
@@ -53,4 +53,4 @@ int main(void)
 	ft_strlcat(dest, src, 12);
 	printf("%s\n", dest);
 }
-
+*/

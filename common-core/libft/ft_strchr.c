@@ -1,4 +1,14 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/26 16:14:08 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/26 16:17:18 by alara-gu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -14,11 +24,13 @@ char	*ft_strchr(const char *s, int c)
 	return (0);
 }
 
-/*int	main(void)
+/*
+int	main(void)
 {
-	char needle[] = "ana";
-	char	heystack[] = "banana";
+	char 	heystack[] = "baxnanax";
+	char	needle = 'y';	
 
 	printf("%s\n", ft_strchr(heystack, needle));
 
-}*/
+}
+*/
