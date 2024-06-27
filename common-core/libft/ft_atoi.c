@@ -16,7 +16,7 @@ int	ft_atoi(char *str)
 {
 	int	nb;
 	int	m;
-	int 	i;
+	int	i;
 
 	i = 0;
 	m = 1;

@@ -12,25 +12,29 @@
 
 #include "libft.h"
 
-static int	putnbr_recursive(int n, int fd);
+static int	putnbr_recursive(long n, int fd);
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n < 0)
-	{
-		write(fd, "-", 1);
-		n = n * -1;
-	}
-	n = n * 10;
-	putnbr_recursive(n, fd);
-}
-
-static int	putnbr_recursive(int n, int fd)
-{
-	int		i;
+	long	nbr;
 	char	c;
 
-	i = 0;
+	nbr = n;
+	c = '0';
+	if (nbr < 0)
+	{
+		write(fd, "-", 1);
+		nbr = nbr * -1;
+	}
+	putnbr_recursive(nbr, fd);
+	c = c + nbr % 10;
+	write(fd, &c, 1);
+}
+
+static int	putnbr_recursive(long n, int fd)
+{
+	char	c;
+
 	c = '0';
 	if (n / 10 == 0)
 		return (n);
@@ -38,14 +42,14 @@ static int	putnbr_recursive(int n, int fd)
 	write (fd, &c, 1);
 	return (n);
 }
-/*
+
 //must create a file called "text" to try it"
 int	main(void)
 {
 	int	fd;
-	int	n = -54326789;
+	int	n = -2147483648;
 
 	fd = open("text", O_WRONLY);
 	ft_putnbr_fd(n, fd);
 }
-*/
+
