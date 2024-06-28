@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 14:07:38 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/28 14:47:01 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/28 17:00:52 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 
 	joint = (char *)malloc(
-			sizeof(s1) * (ft_strlen(s1) + ft_s_strlen(s2) + 1));
+			sizeof(s1) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!joint)
 		return (NULL);
 	else

@@ -6,9 +6,11 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:01:10 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/25 14:01:16 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/28 16:45:03 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

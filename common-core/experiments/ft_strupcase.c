@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
+/*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/26 16:07:20 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/28 16:54:54 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/03/28 17:52:28 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/03/28 17:52:34 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalnum(int c)
+char	*ft_strupcase(char *str)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
-	else
-		return (0);
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] > 96 && str[i] < 123)
+			str[i] = str[i] - 32;
+		i++;
+	}
+	return (str);
 }
