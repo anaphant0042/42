@@ -6,9 +6,11 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 16:23:09 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/26 16:29:18 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/28 14:44:20 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

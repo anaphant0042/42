@@ -6,9 +6,11 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 16:29:42 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/26 16:37:52 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/28 15:09:05 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

@@ -6,9 +6,11 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:35:51 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/25 14:35:55 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/28 14:45:10 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

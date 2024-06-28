@@ -6,9 +6,11 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:21:25 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/25 14:21:59 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/28 14:44:52 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

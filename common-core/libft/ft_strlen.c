@@ -6,9 +6,11 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 16:08:19 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/26 16:08:23 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/28 14:47:48 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strlen(const char *s)
 {

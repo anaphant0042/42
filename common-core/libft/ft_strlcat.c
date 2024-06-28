@@ -6,21 +6,21 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:07:37 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/26 16:10:24 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/28 14:47:27 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_s_strlen(char *str);
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	unsigned int	i;
-	size_t				destlen;
-	size_t				srclen;
+	size_t			destlen;
+	size_t			srclen;
 
 	i = 0;
-	destlen = ft_s_strlen(dest);
-	srclen = ft_s_strlen((char *)src);
+	destlen = ft_strlen(dest);
+	srclen = ft_strlen((char *)src);
 	if (size == 0 || size <= destlen)
 		return (srclen + size);
 	while (src[i] && i < size - destlen - 1)
@@ -30,16 +30,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	}
 	dest[destlen + i] = '\0';
 	return (destlen + srclen);
-}
-
-static int	ft_s_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
 }
 /*
 int main(void)

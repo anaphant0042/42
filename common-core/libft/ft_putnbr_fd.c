@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 17:21:23 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/26 16:00:42 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/28 14:08:38 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static int	putnbr_recursive(long n, int fd)
 	write (fd, &c, 1);
 	return (n);
 }
-
+/*
 //must create a file called "text" to try it"
 int	main(void)
 {
@@ -52,4 +52,4 @@ int	main(void)
 	fd = open("text", O_WRONLY);
 	ft_putnbr_fd(n, fd);
 }
-
+*/

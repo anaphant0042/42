@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/28 14:08:55 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/28 14:09:38 by alara-gu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	checksign(int nb);
@@ -5,7 +17,7 @@ static int	ft_numlen(long nbr);
 static long	convert_pos_long(int nb);
 static int	zero_n_negative(int s, long nbr, char *number, int numlen);
 
-char *ft_itoa(int nb)
+char	*ft_itoa(int nb)
 {
 	char	*number;
 	long	nbr;
@@ -85,7 +97,7 @@ static int	ft_numlen(long nbr)
 	}
 	return (len);
 }
-
+/*
 int	main(void)
 {
 	int nb = -2147483648;
@@ -94,3 +106,4 @@ int	main(void)
 	number = ft_itoa(nb);
 	printf("%s\n", number);
 }
+*/

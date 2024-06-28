@@ -6,11 +6,13 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 16:45:22 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/26 16:54:08 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/28 14:42:55 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strtoint(char *str);
+#include "libft.h"
+
+static int	ft_strtoint(char *str);
 
 int	ft_atoi(char *str)
 {
@@ -30,7 +32,7 @@ int	ft_atoi(char *str)
 	return (nb);
 }
 
-int	ft_strtoint(char *str)
+static int	ft_strtoint(char *str)
 {
 	int	nb;
 	int	i;

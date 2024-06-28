@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
+/*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/28 17:53:13 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/03/28 17:54:50 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/06/28 14:17:12 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/28 14:23:40 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strlowcase(char *str)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] >= 65 && str[i] <= 90)
-			str[i] = str[i] + 32;
-		i++;
-	}
-	return (str);
+int	ft_toupper(int c)
+{
+	if (c >= 97 && c <= 122)
+		c = c - 32;
+	return (c);
 }
+/*
+int	main(void)
+{
+	char c;
+
+	c = 'a';
+	printf("%c\n", c);
+	c = ft_toupper(c);
+	printf("%c\n", c);
+}
+*/

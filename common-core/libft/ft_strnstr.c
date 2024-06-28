@@ -6,9 +6,11 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 16:38:21 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/26 16:44:31 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/28 14:48:17 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(char *str, char *to_find, size_t n)
 {

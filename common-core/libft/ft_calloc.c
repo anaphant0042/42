@@ -1,8 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/28 14:09:58 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/28 15:02:45 by alara-gu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void	ft_s_bzero(void *s, size_t n);
-
-void	*calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	**arrarr;
 
@@ -15,27 +25,16 @@ void	*calloc(size_t nmemb, size_t size)
 	if (!arrarr)
 		return (NULL);
 	else
-		ft_s_bzero(arrarr, nmemb * size);
+		ft_bzero(arrarr, nmemb * size);
 	return (arrarr);
 }
 
-void	ft_s_bzero(void *s, size_t n)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (i < n)
-	{
-		((char *)s)[i] = '\0';
-		i++;
-	}
-}
 /*
 int	main(void)
 {
 	char	**arrarr;
 
-	arrarr = calloc(3, 10);
+	arrarr = ft_calloc(3, 10);
 	arrarr[0] = "ana banana";
 	arrarr[1] = "ini";
 	arrarr[2] = "ono";

@@ -1,8 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/28 14:05:47 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/28 14:49:03 by alara-gu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static int	ft_s_strlen(const char *s);
-static char	*ft_s_substr(char const *s, unsigned int start, size_t len);
-static char	*ft_s_strchr(const char *s, int c);
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -12,65 +20,20 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*buffer;
 
-	inlen = ft_s_strlen((char *)s1);
+	inlen = ft_strlen((char *)s1);
 	start = 0;
 	end = 0;
-	while (ft_s_strchr((char *)set, (char)s1[start]) != 0)
+	while (ft_strchr((char *)set, (char)s1[start]) != 0)
 		start++;
-	while (ft_s_strchr((char *)set, (char)s1[--inlen]) != 0)
+	while (ft_strchr((char *)set, (char)s1[--inlen]) != 0)
 		end++;
 	outlen = inlen - start + 1;
 	buffer = (char *)malloc(sizeof(s1) * (outlen));
 	if (!buffer)
 		return (NULL);
-	buffer = ft_s_substr(s1, start, outlen);
+	buffer = ft_substr(s1, start, outlen);
 	buffer[outlen + 1] = '\0';
 	return (buffer);
-}
-
-static char	*ft_s_strchr(const char *s, int c)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		i++;
-	}
-	return (0);
-}
-
-static char	*ft_s_substr(char const *s, unsigned int start, size_t len)
-{
-	char				*substr;
-	unsigned int		i;
-
-	i = 0;
-	substr = (char *)malloc(sizeof (*s) * (len + 1));
-	if (!substr)
-		return (NULL);
-	else
-	{
-		while (i < len)
-		{
-			substr[i] = s[start + i];
-			i++;
-		}
-		substr[i] = '\0';
-	}
-	return (substr);
-}
-
-static int	ft_s_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
 }
 /*
 int	main(void)

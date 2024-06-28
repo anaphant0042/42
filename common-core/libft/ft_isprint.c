@@ -6,9 +6,11 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 16:07:47 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/26 16:08:09 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/06/28 14:54:16 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

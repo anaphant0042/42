@@ -1,6 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/28 14:08:07 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/28 14:46:31 by alara-gu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_s_strlen(const char *s);
+#include "libft.h"
 
 char	*strdup(const char *s)
 {
@@ -8,7 +18,7 @@ char	*strdup(const char *s)
 	int		i;
 	char	*dest;
 
-	len = ft_s_strlen((char *)s);
+	len = ft_strlen((char *)s);
 	dest = (char *)malloc(sizeof(*s) * (len + 1));
 	if (!dest)
 		return (NULL);
@@ -22,15 +32,6 @@ char	*strdup(const char *s)
 	return (dest);
 }
 
-int	ft_s_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
 /*
 int	main(void)
 {

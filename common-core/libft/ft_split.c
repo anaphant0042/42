@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/28 14:08:20 by alara-gu          #+#    #+#             */
+/*   Updated: 2024/06/28 14:34:45 by alara-gu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	count_words(char *s, char c);
@@ -36,6 +48,8 @@ static int	count_words(char *s, char c)
 	int	i;
 	int	words;
 
+	words = 0;
+	i = 0;
 	while (s[i])
 	{
 		if (s[i] == c)
