@@ -1,9 +1,9 @@
 #include "libft.h"
 
-int	checksign(int nb);
-int	ft_numlen(long nbr);
-long	convert_pos_long(int nb);
-int	zero_n_negative(int s, long nbr, char *number, int numlen);
+static int	checksign(int nb);
+static int	ft_numlen(long nbr);
+static long	convert_pos_long(int nb);
+static int	zero_n_negative(int s, long nbr, char *number, int numlen);
 
 char *ft_itoa(int nb)
 {
@@ -29,7 +29,7 @@ char *ft_itoa(int nb)
 	return (number);
 }
 
-int	zero_n_negative(int s, long nbr, char *number, int numlen)
+static int	zero_n_negative(int s, long nbr, char *number, int numlen)
 {
 	if (s == 1)
 	{
@@ -44,7 +44,7 @@ int	zero_n_negative(int s, long nbr, char *number, int numlen)
 	return (numlen);
 }
 
-long	convert_pos_long(int nb)
+static long	convert_pos_long(int nb)
 {
 	long	nbr;
 
@@ -55,7 +55,7 @@ long	convert_pos_long(int nb)
 	return (nbr);
 }
 
-int	checksign(int nb)
+static int	checksign(int nb)
 {
 	int	s;
 
@@ -66,7 +66,7 @@ int	checksign(int nb)
 	return (s);
 }
 
-int	ft_numlen(long nbr)
+static int	ft_numlen(long nbr)
 {
 	int	len;
 
@@ -88,7 +88,7 @@ int	ft_numlen(long nbr)
 
 int	main(void)
 {
-	int nb = 666666;
+	int nb = -2147483648;
 	char *number;
 
 	number = ft_itoa(nb);

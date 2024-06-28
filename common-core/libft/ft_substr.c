@@ -3,7 +3,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
-	int		i;
+	unsigned int		i;
 
 	i = 0;
 	substr = (char *)malloc(sizeof (*s) * (len + 1));
@@ -23,9 +23,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*
 int	main(void)
 {
-	char s[] = "banana";
+	char s[] = "ana banana";
 	char *d;
-	int	start = 1;
+	int	start = 7;
 	int	len = 3;
 
 	d = ft_substr(s, start, len);

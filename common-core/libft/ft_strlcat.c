@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 static int	ft_s_strlen(char *str);
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)

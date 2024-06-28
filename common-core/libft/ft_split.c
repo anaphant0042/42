@@ -1,7 +1,7 @@
 #include "libft.h"
 
-int	count_words(char *s, char c);
-int	count_letters(char *b, char c);
+static int	count_words(char *s, char c);
+static int	count_letters(char *b, char c);
 
 char	**ft_split(char const *s, char c)
 {
@@ -12,8 +12,7 @@ char	**ft_split(char const *s, char c)
 	int		j;
 
 	words = count_words((char *)s, c) + 1;
-		printf("words: %i\n", words);
-	arrarr = (char **)malloc(sizeof (char **) * (words + 1));
+	arrarr = (char **)malloc(sizeof (char **) * (words));
 	if (!arrarr)
 		return (NULL);
 	arrarr[words + 1] = "\0";
@@ -22,18 +21,17 @@ char	**ft_split(char const *s, char c)
 	while (j < words)
 	{
 		letters = count_letters((char *)s + i, c);
-			printf("letters: %i\n",letters);
 		arrarr[j] = (char *)malloc(sizeof (char *) * (letters + 1));
 		if (!arrarr[j])
 			return (NULL);
-		arrarr[j] = ft_substr(s , i, letters);
+		arrarr[j] = ft_substr(s, i, letters);
 		i = i + letters + 1;
 		j ++;
 	}
 	return (arrarr);
 }
 
-int	count_words(char *s, char c)
+static int	count_words(char *s, char c)
 {
 	int	i;
 	int	words;
@@ -47,7 +45,7 @@ int	count_words(char *s, char c)
 	return (words);
 }
 
-int	count_letters(char *b, char c)
+static int	count_letters(char *b, char c)
 {
 	int	i;
 
