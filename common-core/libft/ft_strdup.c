@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	int		len;
 	int		i;
@@ -39,7 +39,7 @@ int	main(void)
 	char	*s2 = NULL;
 
 	printf("before: %s\n", s2);
-	s2 = strdup(s1);
+	s2 = ft_strdup(s1);
 	printf("after: %s\n", s2);
 }
 */
