@@ -39,10 +39,13 @@ char	**ft_split(char const *s, char c)
 		j++;
 	}
 	arrarr[words] = 0;
-	
 	return (arrarr);
 }
-// tengo que cambiar mi contador de palabras para que no imprima vacios si me mandan  mas de un caracter searador seguido, o si me mandan heads / tails.
+// tengo que cambiar mi contador de palabras 
+// para que no imprima vacios si me mandan  
+// mas de un caracter searador seguido,
+// o si me mandan heads / tails.
+
 static int	count_words(char *s, char c)
 {
 	int	i;
@@ -71,7 +74,7 @@ static int	count_letters(char *b, char c)
 	}
 	return (i);
 }
-
+/*
 int	main(int argc, char **argv)
 {
 	char	*s = argv[1];
@@ -89,7 +92,7 @@ int	main(int argc, char **argv)
 		i++;
 	}
 }
-/*
+
 int	main(void)
 {
 	char	s[] = "Ana banana";
