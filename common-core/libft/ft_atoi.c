@@ -22,14 +22,17 @@ int	ft_atoi(char *str)
 
 	i = 0;
 	m = 1;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
 	if (str[i] == '-')
 	{
 		m = m * -1;
 		i++;
 	}
+	else if (str[i] == '+')
+		i++;
 	nb = ft_strtoint(str + i);
-	nb = nb * m;
-	return (nb);
+	return (nb * m);
 }
 
 static int	ft_strtoint(char *str)
@@ -54,7 +57,7 @@ static int	ft_strtoint(char *str)
 /*
 int	main(void)
 {
-	char	str[] = "0";
+	char	str[] = "\n\n\n  -46\b9 \n5d6xx47";
 	printf("%i", ft_atoi(str));
 }
 */

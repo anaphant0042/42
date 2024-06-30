@@ -17,7 +17,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned int	i;
 
 	i = 0;
-	if (dest < src)
+	if (dest > src)
 	{
 		while (n > 0)
 		{
@@ -38,9 +38,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 /*
 int		main(void)
 {
-	char dest[] = "banana";
-	char src[] = "orange";
-	int n = 5;
+	char *dest;
+	char src[] = "lorem ipsum dolor sit amet";
+	int n = 8;
+	dest = src + 1;
 
 	printf ("%s\n", dest);
 	ft_memmove(dest, src, n);

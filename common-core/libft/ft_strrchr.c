@@ -16,27 +16,28 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 	int	j;
+	int	len;
 
 	i = 0;
-	j = 0;
-	while (s[i])
+	j = -1;
+	len = ft_strlen(s);
+	while (i <= len)
 	{
 		if (s[i] == c)
 			j = i;
 		i++;
 	}
-	if (j == 0)
-		return (0);
+	if (j == -1)
+		return ("NULL");
 	else
 		return ((char *)s + j);
 }
 /*
 int	main(void)
 {
-	char	needle = 'x'; 
-	char	heystack[] = "baxnaxna";
+	char	needle = 'b';
+	char	heystack[] = "bonjour";
 
 	printf("%s\n", ft_strrchr(heystack, needle));
-
 }
 */

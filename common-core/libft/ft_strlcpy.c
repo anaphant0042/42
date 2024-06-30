@@ -20,7 +20,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	i = 0;
 	srclen = ft_strlen((char *)src);
 	if (size == 0)
-		return (0);
+		return (srclen);
 	while (src[i] != '\0' && i < size - 1)
 	{
 		dest[i] = src[i];
@@ -33,11 +33,11 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 /*
 int	main(void)
 {
-	char	src[] = "ana banana";
-	char	dest[] = "xxxxxxxxxx";
-	
+	//char	src[] = "ana banana";
+	char	dest[15] = "rrrrrr";
+
 	printf("%s\n", dest);
-	ft_strlcpy(dest, src, 11);
+	printf("%li\n", ft_strlcpy(dest, "lorem ipsum dolor sit amet", 0));
 	printf("%s\n", dest);
 }
 */

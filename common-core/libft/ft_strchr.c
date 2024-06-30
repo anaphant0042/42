@@ -15,21 +15,23 @@
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
+	int	len;
 
+	len = ft_strlen(s);
 	i = 0;
-	while (s[i])
+	while (i <= len)
 	{
 		if (s[i] == c)
 			return ((char *)s + i);
 		i++;
 	}
-	return (0);
+	return ("NULL");
 }
 /*
 int	main(void)
 {
-	char 	heystack[] = "baxnanax";
-	char	needle = 'y';	
+	char 	heystack[] = "";
+	char	needle = '\0';
 
 	printf("%s\n", ft_strchr(heystack, needle));
 
