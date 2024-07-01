@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+void	ft_print_result(char const *s);
 
 static int	count_words(char *s, char c);
 static int	count_letters(char *b, char c);
@@ -31,6 +32,8 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	while (j < words)
 	{
+		while (s[i] && s[i] == c)
+			i++;
 		letters = count_letters((char *)s + i, c);
 		arrarr[j] = ft_substr(s, i, letters);
 		if (!arrarr[j])
@@ -38,28 +41,31 @@ char	**ft_split(char const *s, char c)
 		i = i + letters + 1;
 		j++;
 	}
-	arrarr[words] = 0;
+	arrarr[words] = NULL;
 	return (arrarr);
 }
-// tengo que cambiar mi contador de palabras 
-// para que no imprima vacios si me mandan  
-// mas de un caracter searador seguido,
-// o si me mandan heads / tails.
 
 static int	count_words(char *s, char c)
 {
 	int	i;
+	int	j;
 	int	words;
 
 	words = 0;
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+	printf("s[i]: %c\n", s[i]);
+		j = 0;
+		if (s[i] != c)
+		{
 			words++;
-		i++;
+			while (s[i + j] && s[i + j] != c)
+				j++;
+		}
+		i = i + j + 1;
 	}
-	words = words + 1;
+	printf("words: %i\n", words);
 	return (words);
 }
 
@@ -68,7 +74,7 @@ static int	count_letters(char *b, char c)
 	int	i;
 
 	i = 0;
-	while (b[i] != c && b[i] != '\0')
+	while (b[i] != c && b[i])
 	{
 		i++;
 	}
@@ -81,7 +87,7 @@ int	main(int argc, char **argv)
 	char	c = argv[2][0];
 	char	**arrarr;
 	int		i;
-	
+
 	if (argc == 0)
 		return (1);
 	arrarr = ft_split(s, c);
@@ -95,17 +101,44 @@ int	main(int argc, char **argv)
 
 int	main(void)
 {
-	char	s[] = "Ana banana";
-	char	c = ' '; 
+	char	s[] = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.";
+	char	c = 'z';
 	char	**arrarr;
 	int		i;
-	
+
 	arrarr = ft_split(s, c);
 	i = 0;
-	while (i < 2)
+	while (arrarr[i])
 	{
 		printf("%s\n", arrarr[i]);
 		i++;
 	}
 }
 */
+int	main(void)
+{
+	char	**tabstr;
+	int		i;
+
+if (!(tabstr = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ')))
+			ft_print_result("NULL");
+		else
+		{
+			while (tabstr[i] != NULL)
+			{
+				ft_print_result(tabstr[i]);
+				write(1, "\n", 1);
+				i++;
+			}
+		}
+}
+
+void	ft_print_result(char const *s)
+{
+	int		len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	write(1, s, len);
+}
