@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-void	ft_print_result(char const *s);
 
 static int	count_words(char *s, char c);
 static int	count_letters(char *b, char c);
@@ -53,33 +52,37 @@ static int	count_words(char *s, char c)
 
 	words = 0;
 	i = 0;
+	j = 0;
 	while (s[i])
 	{
-	printf("s[i]: %c\n", s[i]);
-		j = 0;
 		if (s[i] != c)
 		{
 			words++;
-			while (s[i + j] && s[i + j] != c)
+			while (s[i + j] != c)
+			{
 				j++;
+				if (s[i + j + 1] == '\0')
+					return (words);
+			}
 		}
 		i = i + j + 1;
+		j = 0;
 	}
-	printf("words: %i\n", words);
 	return (words);
 }
 
-static int	count_letters(char *b, char c)
+static int	count_letters(char *s, char c)
 {
 	int	i;
 
 	i = 0;
-	while (b[i] != c && b[i])
+	while (s[i] != c && s[i])
 	{
 		i++;
 	}
 	return (i);
 }
+
 /*
 int	main(int argc, char **argv)
 {
@@ -98,11 +101,12 @@ int	main(int argc, char **argv)
 		i++;
 	}
 }
-
+*/
+/*
 int	main(void)
 {
-	char	s[] = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.";
-	char	c = 'z';
+	char	s[] = "";
+	char	c = 'i';
 	char	**arrarr;
 	int		i;
 
@@ -115,30 +119,3 @@ int	main(void)
 	}
 }
 */
-int	main(void)
-{
-	char	**tabstr;
-	int		i;
-
-if (!(tabstr = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ')))
-			ft_print_result("NULL");
-		else
-		{
-			while (tabstr[i] != NULL)
-			{
-				ft_print_result(tabstr[i]);
-				write(1, "\n", 1);
-				i++;
-			}
-		}
-}
-
-void	ft_print_result(char const *s)
-{
-	int		len;
-
-	len = 0;
-	while (s[len])
-		len++;
-	write(1, s, len);
-}
