@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 16:38:21 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/28 14:48:17 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/07/02 19:00:15 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(char *str, char *to_find, size_t n)
 	size_t	j;
 
 	i = 0;
-	if (to_find == NULL)
+	if (to_find == NULL || n == 0)
 		return (str);
 	while (str[i] && i < n)
 	{
@@ -34,12 +34,12 @@ char	*ft_strnstr(char *str, char *to_find, size_t n)
 /*
 int	main(void)
 {
-	char needle[] = "ana";
-	char	heystack[] = "potasio bxnana split";
+	//char needle[] = "ana";
+	char *needle;
+	char	heystack[] = "Bananasplit";
 	int	n;
 
-	n = 14; // i get a weird seg fault if i dont find 
-				 // the needle n the heystack in the n bytes.
+	n = 6; 
 	printf("%s\n", ft_strnstr(heystack, needle, n));
 }
 */
