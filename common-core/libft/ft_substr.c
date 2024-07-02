@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 14:05:11 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/28 14:05:33 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/07/02 19:30:34 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*substr;
 	unsigned int	i;
 
+	if ((int)start > ft_strlen(s) || start == 0)
+		return (NULL);
 	i = 0;
 	substr = (char *)malloc(sizeof (*s) * (len + 1));
 	if (!substr)
@@ -35,10 +37,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*
 int	main(void)
 {
-	char s[] = "ana banana";
+	char s[] = "YOLO !!!!";
 	char *d;
-	int	start = 7;
-	int	len = 3;
+	int	start = 0;
+	int	len = 10;
 
 	d = ft_substr(s, start, len);
 	printf("%s\n", d);
