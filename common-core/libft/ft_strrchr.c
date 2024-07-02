@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 16:17:43 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/28 14:48:27 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/07/02 18:41:32 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,15 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if (j == -1)
-		return ("NULL");
+		return (NULL);
 	else
 		return ((char *)s + j);
 }
 /*
 int	main(void)
 {
-	char	needle = 'b';
-	char	heystack[] = "bonjour";
+	char	needle = '';
+	char	heystack[] = "";
 
 	printf("%s\n", ft_strrchr(heystack, needle));
 }
