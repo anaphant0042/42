@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	j = -1;
 	len = ft_strlen(s);
-	while (i <= len)
+	while (i <= len + 1)
 	{
 		if (s[i] == c)
 			j = i;
@@ -35,9 +35,12 @@ char	*ft_strrchr(const char *s, int c)
 /*
 int	main(void)
 {
-	char	needle = '';
-	char	heystack[] = "";
+	char	needle = '\0';
+	char	heystack[] = "teste";
 
-	printf("%s\n", ft_strrchr(heystack, needle));
+	if (!(ft_strrchr(heystack, needle)))
+		printf("NULL\n");
+	else
+		printf("%s\n", ft_strrchr(heystack, needle));
 }
 */

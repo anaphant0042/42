@@ -14,4 +14,4 @@ WORKDIR /francinette
 RUN pip3 install -r requirements.txt
 
 WORKDIR /code
-CMD ["python3", "/francinette/main.py"]
+ENTRYPOINT ["python3", "/francinette/main.py"]
