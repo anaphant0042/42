@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 16:32:20 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/07/03 14:17:52 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/07/03 13:25:02 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,7 @@
 static int	count_words(char *s, char c);
 static int	count_letters(char *b, char c);
 static void	freestrs(char **str, int n);
-static int	whitespace(char *s, char c, int i);
 
-/*
-int	main(void)
-{
-	char	s[] = "lor   em ipsum    d  olor set";
-	char	c = ' ';
-	char	**arrarr;
-	int		i;
-
-	arrarr = ft_split(s, c);
-	i = 0;
-	while (arrarr[i])
-	{
-		printf("%s\n", arrarr[i]);
-		i++;
-	}
-}
-*/
 char	**ft_split(char const *s, char c)
 {
 	char	**arrarr;
@@ -46,26 +28,21 @@ char	**ft_split(char const *s, char c)
 	arrarr = (char **)malloc(sizeof (char **) * (words + 1));
 	if (!arrarr)
 		return (NULL);
+	i = 0;
 	j = 0;
 	while (j < words)
 	{
-		i = whitespace((char *)s, c, i);
+		while (s[i] && s[i] == c)
+			i++;
 		letters = count_letters((char *)s + i, c);
 		arrarr[j] = ft_substr(s, i, letters);
 		if (!arrarr[j])
-			return (freestrs(arrarr, j), NULL);
+			return (NULL);
 		i = i + letters + 1;
 		j++;
 	}
 	arrarr[words] = NULL;
 	return (arrarr);
-}
-
-static int	whitespace(char *s, char c, int i)
-{
-	while (s[i] == c)
-		i++;
-	return (i);
 }
 
 static int	count_words(char *s, char c)
@@ -110,11 +87,11 @@ static int	count_letters(char *s, char c)
 static void	freestrs(char **str, int n)
 {
 	int	i;
-
+	
 	i = 0;
 	while (i < n)
 	{
-		free((void *)str[i]);
+		free((void*)str[i]);
 	}
 }
 /*
@@ -136,3 +113,20 @@ int	main(int argc, char **argv)
 	}
 }
 */
+
+int	main(void)
+{
+	char	s[] = "lorem ipsum dolor set";
+	char	c = 'i';
+	char	**arrarr;
+	int		i;
+
+	arrarr = ft_split(s, c);
+	i = 0;
+	while (arrarr[i])
+	{
+		printf("%s\n", arrarr[i]);
+		i++;
+	}
+}
+
