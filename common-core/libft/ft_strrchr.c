@@ -14,19 +14,23 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
-	int	j;
-	int	len;
+	int					i;
+	int					j;
+	int					len;
+	unsigned char		c1;
 
+	c1 = c;
 	i = 0;
 	j = -1;
 	len = ft_strlen(s);
-	while (i <= len + 1)
+	while (s[i] && i <= len)
 	{
-		if (s[i] == c)
+		if (s[i] == c1)
 			j = i;
 		i++;
 	}
+	if (s[i] == c1)
+		return ((char *)s + i);
 	if (j == -1)
 		return (NULL);
 	else
@@ -37,10 +41,11 @@ int	main(void)
 {
 	char	needle = '\0';
 	char	heystack[] = "teste";
+	char *result;
 
-	if (!(ft_strrchr(heystack, needle)))
+	if (!(result = ft_strrchr(heystack, needle)))
 		printf("NULL\n");
 	else
-		printf("%s\n", ft_strrchr(heystack, needle));
+		printf("%s\n", result);
 }
 */

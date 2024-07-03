@@ -14,26 +14,34 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-	int	len;
+	int						i;
+	int						len;
+	unsigned char			c1;
 
+	c1 = c;
 	len = ft_strlen(s);
 	i = 0;
-	while (i <= len)
+	while (s[i] && i < len)
 	{
-		if (s[i] == c)
+		if (s[i] == c1)
 			return ((char *)s + i);
 		i++;
 	}
+	if (s[i] == c1)
+		return ((char *)s + i);
 	return (0);
 }
 /*
 int	main(void)
 {
-	char 	heystack[] = "";
+	char 	heystack[] = "ana banana";
 	char	needle = '\0';
+	char	*result;
 
-	printf("%s\n", ft_strchr(heystack, needle));
-
+	result = ft_strchr(heystack, needle);
+	if (!(result))
+		printf("NULL");
+	else
+		printf("%s\n", result);
 }
 */

@@ -31,6 +31,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	outlen = inlen - start + 1;
 	buffer = ft_substr(s1, start, outlen);
+	if (!buffer)
+		return (NULL);
 	buffer[outlen] = '\0';
 	return (buffer);
 }
