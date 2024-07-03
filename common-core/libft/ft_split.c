@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 16:32:20 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/07/03 14:17:52 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/07/03 15:19:54 by alara-gu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	whitespace(char *s, char c, int i);
 /*
 int	main(void)
 {
-	char	s[] = "lor   em ipsum    d  olor set";
+	char	s[] = "split this for me please!";
 	char	c = ' ';
 	char	**arrarr;
 	int		i;
