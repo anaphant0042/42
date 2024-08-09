@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
+/*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/20 20:01:07 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/03/22 14:33:50 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/08/09 13:06:24 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/09 13:06:30 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,9 @@ void	ft_print_reverse_alphabet(void)
 		letter--;
 	}
 }
+/*
+int	main (void)
+{
+	ft_print_reverse_alphabet();
+}
+*/

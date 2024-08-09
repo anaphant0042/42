@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
+/*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/25 14:56:21 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/03/25 15:03:32 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/08/09 13:06:58 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/09 13:08:32 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,12 @@ void	ft_is_negative(int n)
 		write (1, "P", 1);
 	}
 }
+/*
+int	main(void)
+{
+	int	n;
+
+	n = 0;
+	ft_is_negative(n);
+}
+*/

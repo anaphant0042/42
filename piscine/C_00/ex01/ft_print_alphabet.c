@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
+/*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/20 20:01:07 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/03/21 17:29:47 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/08/09 13:06:06 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/09 13:06:08 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,9 @@ void	ft_print_alphabet(void)
 		write(1, &letter, 1);
 		letter++;
 	}
+}
+
+int	main(void)
+{
+	ft_print_alphabet();
 }

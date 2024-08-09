@@ -3,22 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
+/*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/01 14:58:19 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/04/01 19:12:24 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/08/09 13:11:55 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/09 13:11:57 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(int a, int b);
-void	ft_print_comb2(void);
-
-int main(void)
-{
-	ft_print_comb2();
-}
+void	ft_print_nmbrs(int a, int b);
 
 void	ft_print_comb2(void)
 {
@@ -31,7 +25,7 @@ void	ft_print_comb2(void)
 	{
 		while (b < 100)
 		{
-			ft_putchar(a, b);
+			ft_print_nmbrs(a, b);
 			b++;
 		}
 		a++;
@@ -39,7 +33,7 @@ void	ft_print_comb2(void)
 	}
 }
 
-void	ft_putchar(int a, int b)
+void	ft_print_nmbrs(int a, int b)
 {
 	char	c;
 	char	d;
@@ -58,3 +52,10 @@ void	ft_putchar(int a, int b)
 		write(1, ", ", 2);
 	}
 }
+
+/*
+int main(void)
+{
+	ft_print_comb2();
+}
+*/
