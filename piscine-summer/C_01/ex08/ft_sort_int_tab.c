@@ -6,7 +6,7 @@
 /*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 17:13:53 by anlara-g          #+#    #+#             */
-/*   Updated: 2024/08/10 18:05:12 by anlara-g         ###   ########.fr       */
+/*   Updated: 2024/08/15 15:00:23 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -18,8 +18,8 @@ void	swap(int *one, int *two);
 
 int	main(void)
 {
-	int	intarr[] = {10, 3, 7, 4, 122, 2, 1};
-	int	arrsize = 7;
+	int	intarr[] = {9873, 123, 123, 142, 235, 5, 4, 3, 2, 1};
+	int	arrsize = 10;
 	int	i;
 
 	ft_sort_int_tab(intarr, arrsize);
