@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
+/*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/28 17:29:29 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/03/28 17:44:05 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/08/15 16:22:21 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/15 16:25:17 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//#include <stdio.h>
 
 int	ft_str_is_printable(char *str)
 {
@@ -24,3 +26,16 @@ int	ft_str_is_printable(char *str)
 	}
 	return (1);
 }
+/*
+int	main(int argc, char **argv)
+{
+	char	*str = argv[1]; 
+
+	if (argc < 2)
+		return (0);
+	if (ft_str_is_printable(str) == 1)
+		printf("String is printable\n");
+	else
+		printf("String is NOT printable\n");
+}
+*/

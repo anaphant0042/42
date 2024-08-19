@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
+/*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/27 18:07:59 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/03/27 18:14:20 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/08/15 15:28:17 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/15 16:05:26 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {
@@ -23,3 +25,14 @@ char	*ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+/*
+int	main(void)
+{
+	char	src[] = "Ana";
+	char	dest[10];
+
+	printf("todo ok");
+	ft_strcpy(dest, src);
+	printf("%s\n", dest);
+}
+*/

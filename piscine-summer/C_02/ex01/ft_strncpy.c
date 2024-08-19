@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
+/*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/27 18:30:27 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/03/27 18:39:47 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/08/15 15:09:16 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/15 16:08:51 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//#include <stdio.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -27,3 +29,14 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
+/*
+int	main(void)
+{
+	char	dest[20];
+	char	src[] = "Ana banana";
+	unsigned int	n = 10;
+
+	ft_strncpy(dest, src, n);
+	printf("%s\n", dest);
+}
+*/

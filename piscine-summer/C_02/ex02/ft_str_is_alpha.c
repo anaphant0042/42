@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
+/*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/27 19:33:07 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/04/01 17:42:43 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/08/15 16:09:07 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/15 16:11:41 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_str_is_alpha(char *str)
 {
@@ -24,3 +26,14 @@ int	ft_str_is_alpha(char *str)
 	}
 	return (1);
 }
+/*
+int	main(void)
+{
+	char	str[] = "Anabanana";
+
+	if (ft_str_is_alpha(str) == 1)
+		printf("String is alpha\n");
+	else
+		printf("String is NOT alpha\n");
+}
+*/

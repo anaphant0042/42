@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
+/*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/28 15:56:39 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/03/28 16:00:26 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/08/15 16:11:49 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/15 16:14:26 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//#include <stdio.h>
 
 int	ft_str_is_numeric(char *str)
 {
@@ -24,3 +26,14 @@ int	ft_str_is_numeric(char *str)
 	}
 	return (1);
 }
+/*
+int	main(void)
+{
+	char	str[] = "55555";
+
+	if (ft_str_is_numeric(str) == 1)
+		printf("String is numeric\n");
+	else
+		printf("String is NOT numeric\n");
+}
+*/

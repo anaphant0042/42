@@ -6,17 +6,16 @@
 /*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 14:29:16 by anlara-g          #+#    #+#             */
-/*   Updated: 2024/08/15 14:32:26 by anlara-g         ###   ########.fr       */
+/*   Updated: 2024/08/15 14:33:50 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_print_combn(int n);
 void	write_comma(int i, int j, int n);
 void	write_i(int i);
-
+/*
 int	main(void)
 {
 	int	n;
@@ -24,7 +23,7 @@ int	main(void)
 	n = 3;
 	ft_print_combn(n);
 }
-
+*/
 void	ft_print_combn(int n)
 {
 	int		i;
