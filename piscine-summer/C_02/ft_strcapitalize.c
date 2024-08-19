@@ -6,11 +6,11 @@
 /*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 16:26:35 by anlara-g          #+#    #+#             */
-/*   Updated: 2024/08/19 16:59:27 by anlara-g         ###   ########.fr       */
+/*   Updated: 2024/08/19 16:12:25 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
 char	*ft_strcapitalize(char *str)
 {
@@ -22,20 +22,26 @@ char	*ft_strcapitalize(char *str)
 	while (str[i])
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
 			str[i] = str[i] + 32;
+			i++;
+		}
 		else if (str[i] >= 32 && str[i] <= 64)
 		{
 			if (str[i + 1] >= 'a' && str[i + 1] <= 'z' && str[i + 1])
 			{
 				str[i + 1] = str[i + 1] - 32;
-				i++;
+				i = i + 2;
 			}
+			else
+				i++;
 		}
-		i++;
+		else
+			i++;
 	}
 	return (str);
 }
-/*
+
 int	main(int argc, char **argv)
 {
 	char	*str = argv[1];
@@ -45,4 +51,3 @@ int	main(int argc, char **argv)
 	else
 			printf("%s\n", ft_strcapitalize(str));
 }
-*/
