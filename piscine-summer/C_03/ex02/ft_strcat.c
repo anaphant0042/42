@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
+/*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 14:16:43 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/04/02 14:28:17 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/08/22 16:57:56 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/22 17:02:23 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//#include <stdio.h>
 
 int	ft_strlen(char *str);
 
@@ -39,3 +41,15 @@ int	ft_strlen(char *str)
 	}
 	return (i);
 }
+/*
+int	main(void)
+{
+	char	str1[] = "banana";
+	char	str2[] = "Ana";
+	char	*src = str1;
+	char	*dest = str2;
+
+	ft_strcat(dest, src);
+	printf("%s\n", dest);
+}
+*/

@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 17:02:49 by anlara-g          #+#    #+#             */
-/*   Updated: 2024/08/22 17:04:15 by anlara-g         ###   ########.fr       */
+/*   Created: 2024/08/22 17:08:59 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/22 17:17:58 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h> 
 
 int	ft_strlen(char *str);
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	unsigned int	i;
-	int				len;
+	size_t			destlen;
+	size_t			srclen;
 
 	i = 0;
-	len = ft_strlen(dest);
-	while (src[i] && i < nb)
+	destlen = ft_strlen(dest);
+	srclen = ft_strlen((char *)src);
+	if (size == 0 || size <= destlen)
+		return (srclen + size);
+	while (src[i] && i < size - destlen - 1)
 	{
-		dest[i + len] = src[i];
+		dest[destlen + i] = src[i];
 		i++;
 	}
-	dest[i + len] = '\0';
-	return (dest);
+	dest[destlen + i] = '\0';
+	return (destlen + srclen);
 }
 
 int	ft_strlen(char *str)
@@ -36,19 +40,17 @@ int	ft_strlen(char *str)
 
 	i = 0;
 	while (str[i])
-	{
 		i++;
-	}
 	return (i);
 }
 /*
 int main(void)
 {
 	char src[] = "Banana";
-	char dest[] = "Ana";
-	
+	char dest[] = "Elena";
+
 	printf("dest before: %s\n", dest);
-	ft_strncat(dest, src, 5);
+	printf("function return value: %zu\n", ft_strlcat(dest, src, 10));
 	printf("dest after: %s\n", dest);
 }
 */

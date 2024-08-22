@@ -3,15 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
+/*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/01 19:31:02 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/04/01 19:46:09 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/08/22 16:50:24 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/22 16:52:55 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/*
+#include <stdio.h>
 
-/*#include <stdio.h>*/
+int	ft_strcmp(char *s1, char *s2);
 
+int	main(void)
+{
+	char s1[] = "Hello World!";
+	char s2[] = "Hello Wrold!";
+
+	printf("%i", ft_strcmp(s1, s2));
+
+}
+*/
 int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
@@ -21,11 +32,3 @@ int	ft_strcmp(char *s1, char *s2)
 		i++;
 	return (s1[i] - s2[i]);
 }
-/*int	main(void)
-{
-	char s1[] = "Hello";
-	char s2[] = "Hello1";
-
-	printf("%i", ft_strcmp(s1, s2));
-
-}*/

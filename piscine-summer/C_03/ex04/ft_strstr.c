@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
+/*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/02 14:41:25 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/04/11 15:56:17 by alara-gu         ###   ########.fr       */
+/*   Created: 2024/08/22 17:04:29 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/22 17:07:42 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+//#include <stdio.h>
+
 int	ft_strlen(char *str);
 
 char	*ft_strstr(char *str, char *to_find)
@@ -47,12 +48,13 @@ int	ft_strlen(char *str)
 	}
 	return (i);
 }
-
-/*int	main(void)
+/*
+int	main(void)
 {
-	char needle[] = "ana";
-	char	heystack[] = "banana";
+	char	needle[] = "dolor";
+	char	heystack[] = "eque porro quisquam est qui dolorem ipsum";
 
 	printf("%s\n", ft_strstr(heystack, needle));
 
-}*/
+}
+*/
