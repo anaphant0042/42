@@ -6,7 +6,7 @@
 /*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 17:10:45 by anlara-g          #+#    #+#             */
-/*   Updated: 2024/08/10 17:10:52 by anlara-g         ###   ########.fr       */
+/*   Updated: 2024/08/22 16:31:37 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,12 @@ void	ft_putstr(char *str)
 		str++;
 	}
 }
+/*
+int	main(void)
+{
+	char	str[] = "Ana banana";
+	
+	ft_putstr(str);
+	write(1, "\n", 1);
+}
+*/
