@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/23 14:27:20 by anlara-g          #+#    #+#             */
-/*   Updated: 2024/08/23 14:27:24 by anlara-g         ###   ########.fr       */
+/*   Created: 2024/08/23 14:25:41 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/23 14:32:23 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
+//apenas acabod e copiar el archivo de atoi, le voy a poner la conversi on a base 10
+//que al parecer es muy sencillo
+
 int	ft_atoi(char *str);
 int	ft_checkwhitespace(char *str);
 int	ft_strtoint(char *str, int k);
 
-/*int	main(void)
+int	main(void)
 {
 	char	str[] = "    -+-+--+---+++23as1234";
+	char	base[] = "01";
 	printf("%i", ft_atoi(str));
-}*/
+}
 
-int	ft_atoi(char *str)
+int	ft_atoi(char *str, base)
 {
 	int	nb;
+	int bnb;
 	int	j;
 	int	k;
 	int	m;
@@ -43,8 +48,12 @@ int	ft_atoi(char *str)
 			k++;
 		j++;
 	}
-	nb = ft_strtoint(str, k);
-	nb = nb * m;
+	bnb = ft_strtoint(str, k);
+	bnb = bnb * m;
+	//nb = bnb * base + bnb; this is what I have to calculate
+	// pending convertign the base str to an int? it is only the len, right?
+	// no, the number may not be only numbers, it may be letter... ooooh
+	// this is not going to work as atoi
 	return (nb);
 }
 
