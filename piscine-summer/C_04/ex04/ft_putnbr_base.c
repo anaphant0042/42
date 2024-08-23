@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 13:14:34 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/04/11 19:45:27 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/08/23 14:11:26 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,10 @@ int		ft_calc_baselen(char *base);
 
 int	main(void)
 {
-	char base[] = "0123456789ABCDEF";
-	if (ft_putnbr_base(55, base) == 1)
-	{
+	int number = 300;
+	char base[] = "01234567";
+	if (ft_putnbr_base(number, base) == 1)
 		return(1);
-	}
 }
 
 int	ft_checkbase(char *base)
@@ -34,23 +33,19 @@ int	ft_checkbase(char *base)
 	int	j;
 
 	i = 0;
-	j = 1;
 	if (base[0] == '\0')
 		return (0);
 	else
 	{
+		if (base[0] == '+' || base[0] == '-')
+			return (1);
 		while (base[i])
 		{
-			if (base[i] == '+' || base[i] == '-')
-				return (1);
-			else
+			j = i + 1;	
+			while (base[j])
 			{
-				while (base[i])
-				{
-				if (base[i + j] == base[i])
+				if (base[i] == base[j++])
 					return (1);
-				j++;
-				}
 			}
 			i++;
 		}
@@ -75,7 +70,7 @@ int	ft_putnbr_base(int nbr, char *base)
 
 	if (ft_checkbase(base) == 1)
 	{
-		write(1, "error", 6);
+		write(1, "error\n", 7);
 		return (1);
 	}
 	else if (nbr < 0)
@@ -85,7 +80,7 @@ int	ft_putnbr_base(int nbr, char *base)
 	}
 	baselen = ft_calc_baselen(base);
 	bnbrlen = ft_calc_bnbrlen(nbr, baselen);
-	ft_calculatearr(base, nbr, baselen, bnbrlen + 1);
+	ft_calculatearr(base, nbr, baselen, bnbrlen);
 	return(0);
 }
 
@@ -128,6 +123,7 @@ void	ft_calculatearr(char *base, int Q, int baselen, int BNBRLEN)
 		Q = Q / baselen;
 		i--;
 	}
+	i = 0;
 	while (arr[i])
 	{
 		c = arr[i];
