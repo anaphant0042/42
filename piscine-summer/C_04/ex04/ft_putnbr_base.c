@@ -6,19 +6,18 @@
 /*   By: alara-gu <alara-gu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 13:14:34 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/08/23 14:11:26 by anlara-g         ###   ########.fr       */
+/*   Updated: 2024/08/23 14:16:52 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+//#include <stdio.h>
 
 int		ft_putnbr_base(int nbr, char *base);
 void	ft_calculatearr(char *base, int Q, int baselen, int BNBRLEN);
-int		ft_checkbase(char *base);
 int		ft_calc_bnbrlen(int Q, int baselen);
 int		ft_calc_baselen(char *base);
-
+/*
 int	main(void)
 {
 	int number = 300;
@@ -26,6 +25,7 @@ int	main(void)
 	if (ft_putnbr_base(number, base) == 1)
 		return(1);
 }
+*/
 
 int	ft_checkbase(char *base)
 {
@@ -41,7 +41,7 @@ int	ft_checkbase(char *base)
 			return (1);
 		while (base[i])
 		{
-			j = i + 1;	
+			j = i + 1;
 			while (base[j])
 			{
 				if (base[i] == base[j++])
@@ -51,16 +51,6 @@ int	ft_checkbase(char *base)
 		}
 	}
 	return (0);
-}
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
 }
 
 int	ft_putnbr_base(int nbr, char *base)
@@ -81,7 +71,7 @@ int	ft_putnbr_base(int nbr, char *base)
 	baselen = ft_calc_baselen(base);
 	bnbrlen = ft_calc_bnbrlen(nbr, baselen);
 	ft_calculatearr(base, nbr, baselen, bnbrlen);
-	return(0);
+	return (0);
 }
 
 int	ft_calc_baselen(char *base)
