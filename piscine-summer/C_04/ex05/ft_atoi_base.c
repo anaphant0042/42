@@ -5,87 +5,118 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/23 14:25:41 by anlara-g          #+#    #+#             */
-/*   Updated: 2024/08/23 14:32:23 by anlara-g         ###   ########.fr       */
+/*   Created: 2024/08/26 14:59:50 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/08/28 15:15:35 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 #include <stdio.h>
 
-//apenas acabod e copiar el archivo de atoi, le voy a poner la conversi on a base 10
-//que al parecer es muy sencillo
+void	ft_atoi_base(char *str, char *base);
+void	base_to_int(str, i base);
+int		checkbase(char *base);
+int		ft_strlen(char *str);
 
-int	ft_atoi(char *str);
-int	ft_checkwhitespace(char *str);
-int	ft_strtoint(char *str, int k);
-
-int	main(void)
+int	main(int argc, char **argv)
 {
-	char	str[] = "    -+-+--+---+++23as1234";
-	char	base[] = "01";
-	printf("%i", ft_atoi(str));
+	int	number;
+
+	if (intc != 3)
+		return (1);
+	else
+		number = ft_atoi_base(argv[1], argv[2]);
+
 }
 
-int	ft_atoi(char *str, base)
+int	ft_atoi_base(char *str, char *base)
 {
-	int	nb;
-	int bnb;
-	int	j;
-	int	k;
-	int	m;
+	int	i;
+	int s;
 
-	m = 1;
-	j = ft_checkwhitespace(str);
-	k = j;
-	while (str[j])
+	if (checkbase(base)) == 1 || ft_strlen(str) == 0)
 	{
-		if (str[j] == '-')
+		write(1, "error\n", 6);
+		return (0);
+	}	
+	else
+	{
+		i = 0;
+		while (str[i] && (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13)))
+				i++;
+		while (str[i] && str[i] == '-' && str[i] == '+')
 		{
-			m = m * -1;
-			k++;
+			if (str[i] == '-')
+				s = s * -1;
+			i++;
 		}
-		else if (str[j] == '+')
-			k++;
-		j++;
+		base_to_int(str, i, base);
 	}
-	bnb = ft_strtoint(str, k);
-	bnb = bnb * m;
-	//nb = bnb * base + bnb; this is what I have to calculate
-	// pending convertign the base str to an int? it is only the len, right?
-	// no, the number may not be only numbers, it may be letter... ooooh
-	// this is not going to work as atoi
-	return (nb);
 }
 
-int	ft_checkwhitespace(char *str)
+void	base_to_int(str, i base)
+{
+	int	baselen;
+	int	nbrlen;
+	int	i;
+	int j;
+	int	decimal;
+
+	baselen = ft_strlen(base);
+	nbrlen = ft_strlen(str);
+	i = 1;
+	decimal = 1;
+	while (i <= nbrlen)
+	{
+		j = 0;
+		if (str[i] == str[j])
+		{
+			decimal = decimal + (j * power(baselen(nbrlen - 1)
+			nbrlen--;
+		}
+		else
+			j++;
+	}
+}
+
+int	power(int baselen)
+{
+	
+}
+
+int	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i])
-	{
-		if (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-			i++;
-		else
-			return (i);
-	}
-	return (0);
+		i++;
+	return (i);
 }
 
-int	ft_strtoint(char *str, int k)
+int	checkbase(char *base)
 {
-	int	nb;
+	int	i;
+	int	j;
 
-	nb = 0;
-	while (str[k])
+	i = 0;
+	if (base[0] == '\0' || strlen(base) == 1)
+		return (1);
+	else
 	{
-		if (str[k] >= '0' && str[k] <= '9')
+		while (base[i])
 		{
-			nb = (nb * 10) + (str[k] - 48);
-			k++;
+			if (base[i] == ' ' || (base[i] >= 9 && base[i] <= 13) || base[i] == '+' || base[i] == '-') 
+				return (1);
+			j = i + 1;
+			while (base[j])
+			{
+				if (base[i] == base[j++])
+					return (1);
+			}
+			i++;
 		}
-		else
-			return (nb);
 	}
-	return (nb);
+	return (0);
 }

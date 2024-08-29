@@ -6,7 +6,7 @@
 /*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/23 14:27:39 by anlara-g          #+#    #+#             */
-/*   Updated: 2024/08/23 14:27:40 by anlara-g         ###   ########.fr       */
+/*   Updated: 2024/08/26 15:05:19 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_checkbase(char *base)
 
 	i = 0;
 	if (base[0] == '\0')
-		return (0);
+		return (1);
 	else
 	{
 		if (base[0] == '+' || base[0] == '-')
