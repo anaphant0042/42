@@ -22,7 +22,7 @@ int	ft_filesize(char *file_name)
 	fd = open(file_name, O_RDONLY);
 	if (fd == -1)
 	{
-		ft_print_error(2);
+		write(1, "Cannot read file\n", 17);
 		return (0);
 	}
 	while (read(fd, &c, 1) == 1)

@@ -1,4 +1,5 @@
-OBJS := $(patsubst %.c, %.o, $(wildcard *.c))
+SRCS = $(shell find . -name "*.c")
+OBJS := $(SRCS:%.c=%.o)
 NAME := ft_display_file
 CFLAGS = -Wall -Werror -Wextra
 CC = cc
@@ -6,7 +7,7 @@ CC = cc
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) -o $(NAME) $(OBJS) $(CFLAGS)
+	$(CC) -o $(NAME) header.h $(OBJS) $(CFLAGS)
 
 .PHONY: clean
 

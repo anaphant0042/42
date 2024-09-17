@@ -16,15 +16,13 @@ int	ft_read_file(char *file_name)
 {
 	int		fd;
 	char	text[10000];
-	int		i;
 	int		file_size;
 
-	i = 0;
 	file_size = ft_filesize(file_name);
 	fd = open(file_name, O_RDONLY);
 	if (fd == -1)
 	{
-		ft_print_error(2);
+		write(1, "Cannot read file\n", 17);
 		return (0);
 	}
 	read(fd, text, file_size);
