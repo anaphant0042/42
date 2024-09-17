@@ -1,23 +1,27 @@
-CC = gcc
-CFLAGS = -Wall -Werror -Wextra
 NAME = libft.a
-H_DIR = includes
-HEADERS = $(shell find $(H_DIR) -type f -name "*.h")
-FUNCTIONS = ./srcs/ft_putchar.c, srcs/ft_putstr.c, srcs/ft_strcmp.c, srcs/ft_strlen.c, srcs/ft_swap.c
-OBJS = $(FUNCTIONS:%.c=%.o) 
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
 
-all: $(NAME) 
+INCLUDES_DIR = includes
+SRCS_DIR = srcs
 
-$(NAME):
-	$(CC) $(CFLAGS) -c $(FUNCTIONS) -I $(HEADERS) 
-	ar rcs $(NAME) $(OBJS) 
+CFILES = $(shell find $(SRCS_DIR)/ -name "*.c")
+OFILES = $(CFILES:%.c=%.o)
+
+all: $(NAME)
+
+$(NAME): $(OFILES)
+	ar rcs $(NAME) $(OFILES)
+
+$(OFILES): $(CFILES)
+	$(CC) -c $(CFLAGS) $< -o $@ -I$(INCLUDES_DIR)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OFILES)
 
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+re: fclean $(NAME)
 
-.PHONY: all clean fclean re
+.PHONY:  all clean fclean re
