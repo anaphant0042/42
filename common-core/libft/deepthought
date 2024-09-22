@@ -1,9 +1,9 @@
 = Host-specific information ====================================================
 $> hostname; uname -msr
-de2bd9e4e999
-Linux 5.18.10-76051810-generic x86_64
+ee7888d93ec7
+Linux 6.9.3-76060903-generic x86_64
 $> date
-Wed Jul  3 08:33:20 UTC 2024
+Sun Sep 22 10:17:47 UTC 2024
 $> gcc --version
 gcc (Ubuntu 12.3.0-1ubuntu1~23.04) 12.3.0
 Copyright (C) 2022 Free Software Foundation, Inc.
@@ -57,19 +57,29 @@ cc -c -Wall -Werror -Wextra ft_strtrim.c -o ft_strtrim.o
 cc -c -Wall -Werror -Wextra ft_substr.c -o ft_substr.o
 cc -c -Wall -Werror -Wextra ft_tolower.c -o ft_tolower.o
 cc -c -Wall -Werror -Wextra ft_toupper.c -o ft_toupper.o
-ar rcs libft.a ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o 
+ar rcs libft.a ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o
 
 $> make bonus
 make: *** No rule to make target 'bonus'.  Stop.
 
 $> ls -la libft.a
--rw-r--r-- 1 fortytwo fortytwo 53550 Jul  3 08:33 /home/fortytwo/libft-war-machine/dirlibft/libft.a
+-rw-r--r-- 1 fortytwo fortytwo 54110 Sep 22 10:17 /home/fortytwo/libft-war-machine/dirlibft/libft.a
 
 = Part2_functions ==============================================================
 
 = ft_split.c ===================================================================
 $> norminette ft_split.c | grep -E '(Error|Warning)'
+/code/ft_split.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: SPACE_REPLACE_TAB    (line:   5, col:   5):	Found space when expecting tab
+Error: SPC_AFTER_POINTER    (line:   7, col:  12):	space after pointer
+Error: NEWLINE_PRECEDES_FUNC (line:  31, col:   1):	Functions must be separated by a newline
+Error: SPACE_BEFORE_FUNC    (line:  31, col:   5):	space before function name
+Error: SPC_AFTER_POINTER    (line:  73, col:  12):	space after pointer
+Norme check failed
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_split.c main.c libft.a -o user_exe
 
-= Test 1 ===================================================
-$> ./user_exe 01
+/home/fortytwo/libft-war-machine/dirlibft//ft_split.c:56:11: error: expression which evaluates to zero treated as a null pointer constant of type 'char *' [-Werror,-Wnon-literal-null-conversion]
+        arr[w] = '\0';
+                 ^~~~
+1 error generated.

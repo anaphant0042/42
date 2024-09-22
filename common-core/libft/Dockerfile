@@ -1,16 +1,23 @@
-FROM ubuntu:22.04
+FROM ubuntu:23.04
 
-LABEL maintainer="mmorot@student.42lyon.fr"
-LABEL version="1.0.3"
-LABEL description="francinette image 42"
+ARG UID=1001
+ARG GID=1001
 
-RUN apt-get update && \
-    apt-get install git gcc clang libpq-dev libbsd-dev libncurses-dev valgrind build-essential nasm clang ghc cmake make libxext-dev libbsd-dev libpq-dev python3-dev python3-pip python3-dev python3-venv python3-wheel -y
-RUN pip3 install wheel norminette
-#WORKDIR /
-RUN git clone --recursive https://github.com/xicodomingues/francinette.git /francinette
-WORKDIR /francinette
-RUN pip3 install -r requirements.txt
+RUN apt-get update
+RUN apt-get install -y git python3 python3-pip python3-setuptools pipx clang vim
 
-WORKDIR /code
-ENTRYPOINT ["python3", "/francinette/main.py"]
+RUN groupadd -g "${GID}" fortytwo \
+  && useradd --create-home --no-log-init -u "${UID}" -g "${GID}" fortytwo
+
+USER fortytwo
+WORKDIR /home/fortytwo
+
+RUN pipx install norminette
+RUN echo 'export PATH="$PATH:/home/fortytwo/.local/bin"' >> /home/fortytwo/.bashrc
+
+RUN git clone https://github.com/y3ll0w42/libft-war-machine && \
+    cd libft-war-machine && \
+    git checkout a06422ab9686477deb6ffdab5afe25e7fba6e978
+COPY my_config.sh /home/fortytwo/libft-war-machine
+
+ENTRYPOINT ["bash", "-l", "./libft-war-machine/grademe.sh", "-u", "-b"]

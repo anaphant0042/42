@@ -38,9 +38,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!substr)
 		return (NULL);
 	else
-	{
 		substr = fill_substr(substr, s, start, len);
-	}
 	return (substr);
 }
 
