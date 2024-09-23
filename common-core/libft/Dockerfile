@@ -4,7 +4,7 @@ ARG UID=1001
 ARG GID=1001
 
 RUN apt-get update
-RUN apt-get install -y git python3 python3-pip python3-setuptools pipx clang vim
+RUN apt-get install -y git python3 python3-pip python3-setuptools pipx clang vim gdb
 
 RUN groupadd -g "${GID}" fortytwo \
   && useradd --create-home --no-log-init -u "${UID}" -g "${GID}" fortytwo

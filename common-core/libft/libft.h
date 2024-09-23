@@ -15,6 +15,12 @@
 #include <stdio.h>
 #include <fcntl.h>
 
+typedef struct s_list
+{
+	void	*content;
+	struct s_list	*next;
+} t_list;
+
 int			ft_atoi(char *str);
 void		ft_bzero(void *s, size_t n);
 void		*ft_calloc(size_t nmemb, size_t size);

@@ -1,9 +1,9 @@
 = Host-specific information ====================================================
 $> hostname; uname -msr
-ee7888d93ec7
+62b0a7c4f386
 Linux 6.9.3-76060903-generic x86_64
 $> date
-Sun Sep 22 10:17:47 UTC 2024
+Sun Sep 22 11:04:51 UTC 2024
 $> gcc --version
 gcc (Ubuntu 12.3.0-1ubuntu1~23.04) 12.3.0
 Copyright (C) 2022 Free Software Foundation, Inc.
@@ -63,23 +63,28 @@ $> make bonus
 make: *** No rule to make target 'bonus'.  Stop.
 
 $> ls -la libft.a
--rw-r--r-- 1 fortytwo fortytwo 54110 Sep 22 10:17 /home/fortytwo/libft-war-machine/dirlibft/libft.a
+-rw-r--r-- 1 fortytwo fortytwo 54110 Sep 22 11:04 /home/fortytwo/libft-war-machine/dirlibft/libft.a
 
-= Part2_functions ==============================================================
+= Part1_functions ==============================================================
 
-= ft_split.c ===================================================================
-$> norminette ft_split.c | grep -E '(Error|Warning)'
-/code/ft_split.c: Error!
-Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
-Error: SPACE_REPLACE_TAB    (line:   5, col:   5):	Found space when expecting tab
-Error: SPC_AFTER_POINTER    (line:   7, col:  12):	space after pointer
-Error: NEWLINE_PRECEDES_FUNC (line:  31, col:   1):	Functions must be separated by a newline
-Error: SPACE_BEFORE_FUNC    (line:  31, col:   5):	space before function name
-Error: SPC_AFTER_POINTER    (line:  73, col:  12):	space after pointer
-Norme check failed
-$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_split.c main.c libft.a -o user_exe
+= ft_atoi.c ====================================================================
+$> norminette ft_atoi.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_atoi.c main.c libft.a -o user_exe
 
-/home/fortytwo/libft-war-machine/dirlibft//ft_split.c:56:11: error: expression which evaluates to zero treated as a null pointer constant of type 'char *' [-Werror,-Wnon-literal-null-conversion]
-        arr[w] = '\0';
-                 ^~~~
-1 error generated.
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
