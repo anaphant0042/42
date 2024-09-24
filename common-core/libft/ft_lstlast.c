@@ -1,6 +1,6 @@
 #include "libft.h"
 
-t_list	ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	while (lst)
 	{
@@ -8,4 +8,5 @@ t_list	ft_lstlast(t_list *lst)
 			return (lst);
 		lst = lst->next;
 	}
+	return (lst);
 }
