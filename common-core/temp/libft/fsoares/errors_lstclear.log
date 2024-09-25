@@ -1,0 +1,1 @@
+[1;31mError[0m in test 1: [0;36mft_lstclear(<list: (null)>, [(x) => free([0;31m*[0;36mx)])[0m: [1;31mSegmentation fault![0m

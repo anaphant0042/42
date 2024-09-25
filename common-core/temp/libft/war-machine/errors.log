@@ -1,0 +1,65 @@
+Errors in split: /francinette/temp/libft/war-machine/tests/Part2_functions/ft_split
+Test 6:
+    if (!(tabstr = ft_split("", 'z')))
+        ft_print_result("NULL");
+    else
+        if (!tabstr[0])
+            ft_print_result("ok\n");
+Expected (cat -e test06.output):
+ok$
+
+Your result (cat -e user_output_test06):
+
+Errors in lstadd_back: /francinette/temp/libft/war-machine/tests/Bonus_functions/ft_lstadd_back
+Test 1:
+    begin = NULL;
+    ft_lstadd_back(&begin, elem);
+    ft_lstadd_back(&begin, elem2);
+    ft_lstadd_back(&begin, elem3);
+    ft_lstadd_back(&begin, elem4);
+    while (begin)
+    {
+        ft_print_result(begin);
+        begin = begin->next;
+    }
+Expected (cat -e test01.output):
+lorem$
+ipsum$
+dolor$
+sit$
+
+Your result (cat -e user_output_test01):
+
+Errors in lstclear: /francinette/temp/libft/war-machine/tests/Bonus_functions/ft_lstclear
+Test 1:
+    ft_lstclear(&elem3, &ft_del);
+    if (elem)
+        ft_print_result(elem);
+    else
+        write(1, "NULL", 4);
+    write(1, "\n", 1);
+    if (elem2)
+        ft_print_result(elem2);
+    else
+        write(1, "NULL", 4);
+    write(1, "\n", 1);
+    if (elem3)
+        ft_print_result(elem3);
+    else
+        write(1, "NULL", 4);
+    write(1, "\n", 1);
+    if (elem4)
+    {
+        write(1, "nb_free_done = ", 15);
+        nb_free_done += '0';
+        write(1, &nb_free_done, 1);
+    }
+    else
+        write(1, "NULL", 4);
+Expected (cat -e test01.output):
+lorem$
+ipsum$
+NULL$
+nb_free_done = 2
+Your result (cat -e user_output_test01):
+

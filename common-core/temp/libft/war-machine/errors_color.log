@@ -1,0 +1,65 @@
+[1;31mErrors[0m in [0;34msplit[0m: [1;37m/francinette/temp/libft/war-machine/tests/Part2_functions/ft_split[0m
+[0;34mTest 6[0m:
+    if (!(tabstr = ft_split("", 'z')))
+        ft_print_result("NULL");
+    else
+        if (!tabstr[0])
+            ft_print_result("ok\n");
+[0;33mExpected[0m (cat -e test06.output):
+ok$
+
+[0;31mYour result[0m (cat -e user_output_test06):
+
+[1;31mErrors[0m in [0;34mlstadd_back[0m: [1;37m/francinette/temp/libft/war-machine/tests/Bonus_functions/ft_lstadd_back[0m
+[0;34mTest 1[0m:
+    begin = NULL;
+    ft_lstadd_back(&begin, elem);
+    ft_lstadd_back(&begin, elem2);
+    ft_lstadd_back(&begin, elem3);
+    ft_lstadd_back(&begin, elem4);
+    while (begin)
+    {
+        ft_print_result(begin);
+        begin = begin->next;
+    }
+[0;33mExpected[0m (cat -e test01.output):
+lorem$
+ipsum$
+dolor$
+sit$
+
+[0;31mYour result[0m (cat -e user_output_test01):
+
+[1;31mErrors[0m in [0;34mlstclear[0m: [1;37m/francinette/temp/libft/war-machine/tests/Bonus_functions/ft_lstclear[0m
+[0;34mTest 1[0m:
+    ft_lstclear(&elem3, &ft_del);
+    if (elem)
+        ft_print_result(elem);
+    else
+        write(1, "NULL", 4);
+    write(1, "\n", 1);
+    if (elem2)
+        ft_print_result(elem2);
+    else
+        write(1, "NULL", 4);
+    write(1, "\n", 1);
+    if (elem3)
+        ft_print_result(elem3);
+    else
+        write(1, "NULL", 4);
+    write(1, "\n", 1);
+    if (elem4)
+    {
+        write(1, "nb_free_done = ", 15);
+        nb_free_done += '0';
+        write(1, &nb_free_done, 1);
+    }
+    else
+        write(1, "NULL", 4);
+[0;33mExpected[0m (cat -e test01.output):
+lorem$
+ipsum$
+NULL$
+nb_free_done = 2
+[0;31mYour result[0m (cat -e user_output_test01):
+

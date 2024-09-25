@@ -1,0 +1,1 @@
+[1;31mError[0m in test 1: [0;36mft_lstadd_back(<list: (null)>, {node: "last"})[0m: [1;31mSegmentation fault![0m

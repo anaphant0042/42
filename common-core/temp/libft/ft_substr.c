@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 14:05:11 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/07/02 19:30:34 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/09/25 16:21:33 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!substr)
 		return (NULL);
 	else
-	{
 		substr = fill_substr(substr, s, start, len);
-	}
 	return (substr);
 }
 
