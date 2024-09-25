@@ -6,7 +6,7 @@
 /*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 17:19:00 by anlara-g          #+#    #+#             */
-/*   Updated: 2024/09/14 16:14:43 by anlara-g         ###   ########.fr       */
+/*   Updated: 2024/09/25 13:33:45 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	ft_read_file(char *file_name)
 		return (0);
 	}
 	read(fd, text, file_size);
-	text[file_size + 1] = '\0';
 	ft_display_file(text);
 	close(fd);
 	return (0);

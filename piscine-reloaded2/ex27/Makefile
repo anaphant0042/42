@@ -7,7 +7,7 @@ CC = cc
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) -o $(NAME) header.h $(OBJS) $(CFLAGS)
+	$(CC) -o $(NAME) $(OBJS) $(CFLAGS)
 
 .PHONY: clean
 
