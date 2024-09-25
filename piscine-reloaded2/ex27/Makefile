@@ -1,4 +1,5 @@
-SRCS = $(shell find . -name "*.c")
+SRCS = main.c read_file.c 
+#SRCS = $(shell find . -name "*.c")
 OBJS := $(SRCS:%.c=%.o)
 NAME := ft_display_file
 CFLAGS = -Wall -Werror -Wextra

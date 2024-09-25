@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_read_file.c                                     :+:      :+:    :+:   */
+/*   read_file.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/13 17:19:00 by anlara-g          #+#    #+#             */
-/*   Updated: 2024/09/25 13:45:13 by anlara-g         ###   ########.fr       */
+/*   Created: 2024/09/25 14:55:18 by anlara-g          #+#    #+#             */
+/*   Updated: 2024/09/25 14:56:54 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-int	ft_read_file(char *file_name)
+int read_file(char *text)
 {
-	int		fd;
-	char	text[10000];
-	int		file_size;
+	int fd;
+	char c;
 
-	file_size = ft_filesize(file_name);
-	fd = open(file_name, O_RDONLY);
-	if (fd == -1)
+	if ((fd = open(text, O_RDONLY)) == -1)
 		return (1);
-	read(fd, text, file_size);
-	ft_display_file(text);
-	close(fd);
+	while (read(fd, &c, 1) == 1)
+		write(1, &c, 1);
 	return (0);
 }
