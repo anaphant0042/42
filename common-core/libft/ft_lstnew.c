@@ -23,3 +23,12 @@ t_list	*ft_lstnew(void *content)
 	head->next = NULL;
 	return (head);
 }
+/*
+int	main(void)
+{
+	t_list *node1;
+
+	node1 = ft_lstnew("Ana banana");
+	printf("%s", (char *)node1->content);
+}
+*/

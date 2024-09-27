@@ -33,7 +33,10 @@ int	main(int argc, char **argv)
 	char *string = argv[1];
 	arr = ft_split(string, c);
 	if (!arr[0])
+	{
 		printf("ok");
+		return (0);
+	}
 	i = 0;
 	while (arr[i])
 	{
