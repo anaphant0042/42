@@ -16,7 +16,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
 
-	if (!dest || !src || !n)
+	if (!n)
+		return (dest);
+	if (!dest && !src)
 		return (NULL);
 	i = 0;
 	if (dest > src)
