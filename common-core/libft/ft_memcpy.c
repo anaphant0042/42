@@ -16,8 +16,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
 
-	if (n == 0)
+	if (n == 0 || !n)
 		return (dest);
+	if (!dest || !src)
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{
@@ -26,34 +28,21 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
 /*
-//this versions adds a null terminator after coping memory
-//but now I don´t think that is the intention of memcpy
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	unsigned int	i;
-
-	if (n == 0)
-		return (dest);
-	i = 0;
-	while (i < n)
-	{
-		((char *)dest)[i] = ((char *)src)[i];
-		i++;
-	}
-	((char *)dest)[i] = '\0';
-	return (dest);
-}
-
 int	main(void)
 {
-	char	dest[] = "banana";
-	char	src[] = "orange";
+	char	*dest = NULL;
+	char	*dest2 = NULL;
+	char	*src = NULL;
 	size_t	n;
 
-	n = 4;
-	printf("%s\n", dest);
-	ft_memcpy(dest, src, n);
-	printf("%s\n", dest);
+	n = 0;
+	if (ft_memcpy(dest, src, n) == NULL)
+		printf("ft_memcpy returnung NULL as expected\n");
+	else
+		printf("my version of memcpy: %s\n", dest);
+	memcpy(dest2, src, n);
+	printf("official memcpy: %s\n", dest2);
 }
 */

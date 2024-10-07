@@ -16,6 +16,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
 
+	if (!dest || !src || !n)
+		return (NULL);
 	i = 0;
 	if (dest > src)
 	{
@@ -38,13 +40,23 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 /*
 int		main(void)
 {
-	char *dest;
+	//char dest[20] = "Ana";
+	//char dest2[20] = "Ana";
 	char src[] = "lorem ipsum dolor sit amet";
-	int n = 8;
+	char src2[] = "lorem ipsum dolor sit amet";
+	int n = 6;
+	char *dest;
+	char *dest2;
 	dest = src + 1;
+	dest2 = src2 + 1;
 
-	printf ("%s\n", dest);
-	ft_memmove(dest, src, n);
-	printf ("%s\n", dest);
+	if (ft_memmove(dest, src, n) != NULL)
+	{
+		printf ("my func: %s\n", dest);
+		memmove(dest2, src2, n);
+		printf ("memmove: %s\n", dest2);
+	}
+	else
+		printf("function returning null as expected");
 }
 */

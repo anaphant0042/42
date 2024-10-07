@@ -21,20 +21,25 @@ static void	fill_arr(const char *s, char **arr, int words, char c);
 /*
 int	main(int argc, char **argv)
 {
-	char	**arr;
 	int		i;
-
+	char	**arr;
+//test with args
+	char c = argv[2][0];
+	char *string = argv[1];
 	if (argc != 3)
 	{
 		printf("not enough args");
 		return (1);
 	}
-	char c = argv[2][0];
-	char *string = argv[1];
+
+	//test with fixed values
+	//char c = '\0';
+	//char string[] = "\0aa\0bbb";
+
 	arr = ft_split(string, c);
 	if (!arr)
 	{
-		printf("ok");
+		printf("there is no arr\n");
 		return (0);
 	}
 	i = 0;

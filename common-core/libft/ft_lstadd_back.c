@@ -34,14 +34,17 @@ int	main(void)
 {
 	t_list *node1;
 	t_list *node2;
+	t_list *node3;
 	t_list *lst;
 
 	//node1 = ft_lstnew("Ana ");
-	node2 = ft_lstnew("banana");
-	//node2 = NULL;
-	node1 = NULL; 
+	//node2 = ft_lstnew("banana");
+	node3 = ft_lstnew("girasol");
+	node2 = NULL;
+	node1 = NULL;
 	ft_lstadd_back(&node1, node2);
-	lst = node1;
+	ft_lstadd_back(&node2, node3);
+	lst = node3;
 	while (lst)
 	{
 		printf("%s\n", (char *)lst->content);
