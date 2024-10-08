@@ -6,7 +6,7 @@
 /*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:21:39 by anlara-g          #+#    #+#             */
-/*   Updated: 2024/10/01 17:48:25 by anlara-g         ###   ########.fr       */
+/*   Updated: 2024/10/08 17:25:40 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int argc, char **argv)
 	char *string = argv[1];
 	if (argc != 3)
 	{
-		printf("not enough args");
+		//printf("not enough args");
 		return (1);
 	}
 
@@ -39,7 +39,7 @@ int	main(int argc, char **argv)
 	arr = ft_split(string, c);
 	if (!arr)
 	{
-		printf("there is no arr\n");
+		//printf("there is no arr\n");
 		return (0);
 	}
 	i = 0;
@@ -48,6 +48,7 @@ int	main(int argc, char **argv)
 		printf("%s\n", arr[i]);
 		i++;
 	}
+	free_arr(arr, count_words(string, c));
 }
 */
 
@@ -79,7 +80,10 @@ static void	fill_arr(const char *s, char **arr, int words, char c)
 			i++;
 		arr[w] = fill_words(s + i, c);
 		if (!arr[w])
+		{
 			free_arr(arr, w);
+			return ;
+		}
 		while (s[i] && s[i] != c)
 			i++;
 		w++;
