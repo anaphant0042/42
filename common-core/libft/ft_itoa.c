@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 14:08:55 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/28 14:09:38 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/10/09 14:28:49 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,6 @@ int	main(void)
 
 	number = ft_itoa(nb);
 	printf("%s\n", number);
+	free(number);
 }
 */

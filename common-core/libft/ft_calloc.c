@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 14:09:58 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/28 15:02:45 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/10/09 14:24:15 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ int	main(void)
 	printf("%s\n", arrarr[0]);
 	printf("%s\n", arrarr[1]);
 	printf("%s\n", arrarr[2]);
+	free(arrarr);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 14:05:47 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/28 14:49:03 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/10/09 14:27:50 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ int	main(void)
 	printf("%s\n", s1);
 	buffer = ft_strtrim(s1, set);
 	printf("%s\n", buffer);
+	free(buffer);
 }
 */

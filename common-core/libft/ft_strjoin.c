@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 14:07:38 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/28 17:00:52 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/10/09 14:26:29 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ int	main(void)
 	printf("%s\n", s2);
 	joint = ft_strjoin(s1, s2);
 	printf("%s\n", joint);
+	free(joint);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 14:08:07 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/06/28 14:46:31 by alara-gu         ###   ########.fr       */
+/*   Updated: 2024/10/09 14:19:04 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ int	main(void)
 	printf("before: %s\n", s2);
 	s2 = ft_strdup(s1);
 	printf("after: %s\n", s2);
+	free(s2);
 }
 */

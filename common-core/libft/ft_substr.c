@@ -6,7 +6,7 @@
 /*   By: alara-gu <alara-gu@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 14:05:11 by alara-gu          #+#    #+#             */
-/*   Updated: 2024/09/25 16:21:33 by anlara-g         ###   ########.fr       */
+/*   Updated: 2024/10/09 14:25:33 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,6 @@ int	main(void)
 
 	d = ft_substr(s, start, len);
 	printf("%s\n", d);
+	free(d);
 }
 */
