@@ -12,12 +12,15 @@ BOBJS = $(BONUS:%.c=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	ar rcs $(NAME) $^
 
 bonus: $(OBJS) $(BOBJS)
 	ar rcs $(NAME) $^
 
-%.o: %.c $(HEADERS)
+$(OBJS): %.o: %.c libft.h 
+	$(CC) -c $(CFLAGS) $< -o $@
+
+$(BOBJS): %.o: %.c libft.h 
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
