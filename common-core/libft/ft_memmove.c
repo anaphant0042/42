@@ -39,14 +39,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
+
 int		main(void)
 {
 	//char dest[20] = "Ana";
 	//char dest2[20] = "Ana";
 	char src[] = "lorem ipsum dolor sit amet";
 	char src2[] = "lorem ipsum dolor sit amet";
-	int n = 6;
+	int n = -1;
 	char *dest;
 	char *dest2;
 	dest = src + 1;
@@ -61,4 +61,4 @@ int		main(void)
 	else
 		printf("function returning null as expected");
 }
-*/
+
