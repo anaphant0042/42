@@ -46,7 +46,7 @@ int		main(void)
 	//char dest2[20] = "Ana";
 	char src[] = "lorem ipsum dolor sit amet";
 	char src2[] = "lorem ipsum dolor sit amet";
-	int n = 6;
+	int n = -1;
 	char *dest;
 	char *dest2;
 	dest = src + 1;
