@@ -6,7 +6,7 @@
 /*   By: anlara-g <anlara-g@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:21:39 by anlara-g          #+#    #+#             */
-/*   Updated: 2024/10/08 17:25:40 by anlara-g         ###   ########.fr       */
+/*   Updated: 2024/10/11 18:11:27 by anlara-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	**ft_split(char const *s, char c)
 	if (!s || c == '\0' || ft_strlen(s) == 0)
 		return (NULL);
 	words = count_words(s, c);
-	arr = malloc(sizeof(char *) * words + 1);
+	arr = malloc(sizeof(char *) * (words + 1));
 	if (!arr)
 		return (NULL);
 	fill_arr(s, arr, words, c);
@@ -117,7 +117,7 @@ static char	*fill_words(char const *s, char c)
 		i++;
 		letters++;
 	}
-	arr = malloc(sizeof (char) * letters + 1);
+	arr = malloc(sizeof (char) * (letters + 1));
 	if (!arr)
 		return (NULL);
 	i = 0;
