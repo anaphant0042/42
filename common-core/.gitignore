@@ -1,2 +1,4 @@
 temp/
 valgrind*
+*.h.gch
+text
