@@ -1,0 +1,76 @@
+#_preseed_V1
+
+# Root password, either in clear text
+d-i passwd/root-password password Magnolia4242!
+d-i passwd/root-password-again password Magnolia4242!
+
+# To create a normal user account.
+d-i passwd/user-fullname string Ana Lucia
+d-i passwd/username string anlara-g42
+# Normal user's password, either in clear text
+d-i passwd/user-password Manzanilla4242!
+d-i passwd/user-password-again Manzanilla4242!
+
+# Alternatively, you may specify a disk to partition. If the system has only
+# one disk the installer will default to using that,
+# The presently available methods are:
+# - regular: use the usual partition types for your architecture
+# - lvm:     use LVM to partition the disk
+# - crypto:  use LVM within an encrypted partition
+d-i partman-auto/method string crypto
+
+# You can define the amount of space that will be used for the LVM volume
+# group. It can either be a size with its unit (eg. 20 GB), a percentage of
+# free space or the 'max' keyword.
+d-i partman-auto-lvm/guided_size string max
+
+# If one of the disks that are going to be automatically partitioned
+# contains an old LVM configuration, the user will normally receive a
+# warning. This can be preseeded away...
+d-i partman-lvm/device_remove_lvm boolean true
+# The same applies to pre-existing software RAID array:
+d-i partman-md/device_remove_md boolean true
+# And the same goes for the confirmation to write the lvm partitions.
+d-i partman-lvm/confirm boolean true
+d-i partman-lvm/confirm_nooverwrite boolean true
+
+# You can choose one of the three predefined partitioning recipes:
+# - atomic: all files in one partition
+# - home:   separate /home partition
+# - multi:  separate /home, /var, and /tmp partitions
+d-i partman-auto/choose_recipe select home
+
+# This makes partman automatically partition without confirmation, provided
+# that you told it what to do using one of the methods above.
+d-i partman-partitioning/confirm_write_new_label boolean true
+d-i partman/choose_partition select finish
+d-i partman/confirm boolean true
+d-i partman/confirm_nooverwrite boolean true
+
+# When disk encryption is enabled, skip wiping the partitions beforehand.
+d-i partman-auto-crypto/erase_disks boolean false
+
+# Choose, if you want to scan additional installation media
+# (default: false).
+d-i apt-setup/cdrom/set-first boolean false
+
+tasksel tasksel/first multiselect standard, ssh-server
+
+# Individual additional packages to install
+d-i pkgsel/include string vim ufw pam_pwquality
+
+popularity-contest popularity-contest/participate boolean false
+
+# Grub is the boot loader (for x86).
+
+# This is fairly safe to set, it makes grub install automatically to the UEFI
+# partition/boot record if no other operating system is detected on the machine.
+d-i grub-installer/only_debian boolean true
+
+# This one makes grub-installer install to the UEFI partition/boot record, if
+# it also finds some other OS, which is less safe as it might not be able to
+# boot that other OS.
+d-i grub-installer/with_other_os boolean true
+
+# Avoid that last message about the install being complete.
+d-i finish-install/reboot_in_progress note
