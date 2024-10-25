@@ -1,5 +1,8 @@
 #_preseed_V1
 
+# Preseeding only locale sets language, country and locale.
+d-i debian-installer/locale string en_US
+
 # Root password, either in clear text
 d-i passwd/root-password password Magnolia4242!
 d-i passwd/root-password-again password Magnolia4242!
