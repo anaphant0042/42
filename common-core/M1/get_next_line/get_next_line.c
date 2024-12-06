@@ -21,7 +21,7 @@ char	*cat_buff_nl(char *carry, char *buffer);
 int	main(void)
 {
 	int	fd = open("text", O_RDONLY);
-	//printf("fd: %i\n", fd);
+	printf("fd: %i\n", fd);
 	char	*next_line;
 
 	next_line = get_next_line(fd);
