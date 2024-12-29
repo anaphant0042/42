@@ -10,13 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <stdio.h> // for test
+#include <unistd.h> // for write
+#include <stdlib.h> // for malloc
+#include <fcntl.h> // for read
+#include <stdio.h> // for testing
 
 #ifndef BUFFER_SIZE
 #define BUFFER_SIZE 20
 #endif
 
 char	*get_next_line(int fd);
+char	*ft_strjoin(char const *s1, char const *s2);
+int	ft_strchr_i(const char *s, int c);
+int	ft_strlen(const char *s);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strdup(const char *s);
